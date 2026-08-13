@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yun｜PR & MKT Freelancer</title>
+<meta name="description" content="Yun｜PR & MKT Freelancer — 里長 Yun 的媒體公關與行銷接案作品集，提供採訪撰稿、社群經營、活動企劃等服務。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --ink: #3b3a35;
+    --muted: #8a8578;
+    --paper: #fffdf8;
+    --sage: #8fa888;
+    --terracotta: #d98f6f;
+    --line: rgba(143,168,136,0.25);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", "Noto Sans TC", "Hiragino Sans", "PingFang TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(160deg, #f6f1e6 0%, #eaf1e4 45%, #f6e7dc 100%);
+    background-size: 220% 220%;
+    animation: gradientFlow 12s ease-in-out infinite;
+    min-height: 100vh;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  @keyframes gradientFlow {
+    0%, 100% { background-position: 0% 30%; }
+    50% { background-position: 100% 70%; }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.9s ease forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    body, .fade-in {
+      animation: none !important;
+      opacity: 1;
+    }
+  }
+
+  .bg-blobs {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.5;
+  }
+
+  .blob.b1 {
+    width: 420px;
+    height: 420px;
+    top: -120px;
+    left: -100px;
+    background: radial-gradient(circle, rgba(143,168,136,0.55), transparent 70%);
+    animation: floatA 26s ease-in-out infinite;
+  }
+
+  .blob.b2 {
+    width: 480px;
+    height: 480px;
+    bottom: -160px;
+    right: -120px;
+    background: radial-gradient(circle, rgba(217,143,111,0.45), transparent 70%);
+    animation: floatB 32s ease-in-out infinite;
+  }
+
+  @keyframes floatA {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(60px, 50px) scale(1.1); }
+  }
+
+  @keyframes floatB {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-55px, -50px) scale(1.08); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .blob { animation: none !important; }
+  }
+
+  /* ---------- Nav ---------- */
+
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 28px;
+    background: rgba(255, 253, 248, 0.82);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+    min-width: 0;
+  }
+
+  .nav-brand img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .nav-brand span {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 48vw;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--line);
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--ink);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .nav-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .nav-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(143,168,136,0.22);
+  }
+
+  /* ---------- Hero ---------- */
+
+  .hero-photo {
+    position: relative;
+    min-height: 82vh;
+    display: flex;
+    align-items: flex-end;
+    background-image: linear-gradient(180deg, rgba(59,58,53,0.2) 0%, rgba(59,58,53,0.58) 72%, rgba(59,58,53,0.8) 100%), url("assets/yilan.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 40px 24px 64px;
+    width: 100%;
+    text-align: center;
+    color: #fffdf8;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 999px;
+    padding: 8px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    color: #fffdf8;
+    animation-delay: 0s;
+  }
+
+  h1 {
+    font-size: clamp(32px, 5.4vw, 54px);
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    animation-delay: 0.12s;
+  }
+
+  h1 span {
+    color: #f4b48c;
+    font-weight: 700;
+    text-shadow: 0 2px 14px rgba(59,58,53,0.55);
+  }
+
+  .subtitle {
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    opacity: 0.95;
+    animation-delay: 0.24s;
+  }
+
+  .tagline {
+    margin: 26px auto 0;
+    max-width: 560px;
+    font-size: 14.5px;
+    line-height: 1.9;
+    letter-spacing: 0.02em;
+    opacity: 0.9;
+    animation-delay: 0.36s;
+  }
+
+  .cta-row {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+    animation-delay: 0.48s;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .btn-primary {
+    background: var(--terracotta);
+    color: #fffdf8;
+    box-shadow: 0 12px 26px rgba(217,143,111,0.4);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.12);
+    color: #fffdf8;
+    border: 1px solid rgba(255,255,255,0.55);
+  }
+
+  /* ---------- Layout ---------- */
+
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 72px 24px 100px;
+  }
+
+  section + section {
+    margin-top: 96px;
+  }
+
+  .section-head {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 44px;
+  }
+
+  .section-head h2 {
+    font-size: clamp(24px, 3.4vw, 32px);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+  }
+
+  /* ---------- Stats ---------- */
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .stat-item {
+    text-align: center;
+    background: var(--paper);
+    border-radius: 22px;
+    padding: 28px 16px;
+    border: 1px solid rgba(143,168,136,0.14);
+    box-shadow: 0 16px 40px rgba(90, 80, 60, 0.06);
+  }
+
+  .stat-number {
+    font-size: clamp(28px, 4.4vw, 40px);
+    font-weight: 800;
+    color: var(--terracotta);
+    letter-spacing: 0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-label {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.03em;
+  }
+
+  /* ---------- Services ---------- */
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 28px;
+  }
+
+  .service-item {
+    background: var(--paper);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(90, 80, 60, 0.08);
+    padding: clamp(28px, 4vw, 36px);
+    border: 1px solid rgba(143,168,136,0.14);
+    text-align: center;
+  }
+
+  .service-item h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 14px;
+    letter-spacing: 0.01em;
+  }
+
+  .service-item p {
+    font-size: 13.8px;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+
+  /* ---------- Portfolio cards ---------- */
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+
+  .work-card {
+    background: var(--paper);
+    border-radius: 26px;
+    box-shadow: 0 20px 50px rgba(90, 80, 60, 0.08);
+    padding: clamp(28px, 4vw, 38px);
+    border: 1px solid rgba(143,168,136,0.14);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .work-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 60px rgba(143,168,136,0.2);
+  }
+
+  .work-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 22px;
+  }
+
+  .work-image--logo {
+    object-fit: contain;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .work-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 14px;
+    letter-spacing: 0.01em;
+  }
+
+  .work-card p {
+    font-size: 13.8px;
+    color: var(--muted);
+    line-height: 1.85;
+  }
+
+  .work-results {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+
+  .work-results-title {
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--sage);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .work-results ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .work-results li {
+    position: relative;
+    padding-left: 16px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .work-results li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--terracotta);
+  }
+
+  /* ---------- Contact CTA ---------- */
+
+  .contact-card {
+    background: var(--paper);
+    border-radius: 28px;
+    box-shadow: 0 20px 50px rgba(90, 80, 60, 0.08);
+    padding: clamp(36px, 6vw, 56px);
+    border: 1px solid rgba(143,168,136,0.14);
+    text-align: center;
+  }
+
+  .contact-card h2 {
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .contact-card p {
+    font-size: 14.5px;
+    color: var(--muted);
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .mobile-break {
+    display: none;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: #fbf8f1;
+    border: 1px solid rgba(143,168,136,0.15);
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .contact-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(143,168,136,0.16);
+  }
+
+  .contact-link img {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer.site-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 60px;
+    letter-spacing: 0.03em;
+  }
+
+  footer.site-footer .sign {
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  footer.site-footer .copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  /* ---------- Mobile RWD (<=480px) ---------- */
+
+  @media (max-width: 480px) {
+    html {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .nav-brand img {
+      height: 30px;
+    }
+
+    .nav-brand span {
+      font-size: 12px;
+    }
+
+    section + section {
+      margin-top: 72px;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .work-grid {
+      grid-template-columns: 1fr;
+    }
+
+    h1 {
+      font-size: clamp(28px, 9vw, 38px);
+    }
+
+    .mobile-break {
+      display: initial;
+    }
+
+    .contact-card p {
+      font-size: 12.5px;
+    }
+
+    .btn,
+    .contact-link {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-icon {
+      width: 44px;
+      height: 44px;
+      min-height: 44px;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="bg-blobs">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+  </div>
+
+  <nav class="site-nav">
+    <a class="nav-brand" href="#top">
+      <img src="assets/Logo.png" alt="Yun Logo">
+      <span>Yun｜PR &amp; MKT Freelancer</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-icon" href="https://www.instagram.com/ooo.travel.32y/" target="_blank" rel="noopener" title="Instagram">
+        <img src="assets/instagram-icon.webp" alt="Instagram">
+      </a>
+      <a class="nav-icon" href="https://www.threads.com/@ooo.travel.32y" target="_blank" rel="noopener" title="Threads">
+        <img src="assets/threads-icon.webp" alt="Threads">
+      </a>
+      <a class="nav-icon" href="#contact" title="與我聯繫">✉️</a>
+    </div>
+  </nav>
+
+  <header class="hero-photo" id="top">
+    <div class="hero-inner">
+      <div class="badge fade-in">Out of Office 佈告欄</div>
+      <h1 class="fade-in">品牌交給我<br>讓<span>全里的人</span>都認識你</h1>
+      <p class="subtitle fade-in">里長 Yun｜媒體・公關・行銷・活動企劃</p>
+      <p class="tagline fade-in">從高雄嫁到宜蘭的J人里長伯，喜歡把旅途中蒐集的觀察，轉化成有溫度的語言。<br>就像規劃行程一樣，擅長把複雜的專案理出清楚路線與節奏，陪伴品牌好好被看見。</p>
+      <div class="cta-row fade-in">
+        <a class="btn btn-primary" href="#contact">與我聯繫</a>
+        <a class="btn btn-secondary" href="#work">觀看作品</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <section id="stats">
+      <div class="section-head">
+        <h2>里長成績單</h2>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="1000" data-suffix="+">0</div>
+          <div class="stat-label">採訪報導、文章</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="50" data-suffix="+">0</div>
+          <div class="stat-label">籌辦活動場次</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="4" data-suffix="">0</div>
+          <div class="stat-label">經營社群帳號</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="10000" data-suffix="+">0</div>
+          <div class="stat-label">累計社群追蹤人數</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-head">
+        <h2>里民服務</h2>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-item">
+          <h3>採訪撰稿與文字企劃</h3>
+          <p>曾任第一線媒體記者，練就了扎實的文字基本功與精準的下標敏銳度。擅長針對不同受眾切換口吻，面對企業客戶（To B）端出邏輯清晰的專業論點；面對一般大眾（To C）寫出易懂、有共鳴的好故事，幫你把話精準說進受眾心坎裡。</p>
+        </div>
+        <div class="service-item">
+          <h3>社群經營與行銷</h3>
+          <p>結合多年的行銷公關經驗，里長伯擅長為品牌操刀社群大小事，把路人養出鐵粉黏著度。從內容企劃、貼文排程到成效追蹤，掌握不同平台的演算法邏輯與受眾喜好，規劃能持續累積聲量的內容節奏。我的服務包含社群媒體經營、圖文或短影音內容產製、社群數據分析與優化建議。</p>
+        </div>
+        <div class="service-item">
+          <h3>線上線下活動企劃與專案統籌</h3>
+          <p>不管是要舉辦對外的講座、論壇等活動，還是想弄一場輕鬆好玩的內部交流聚會、茶會，細節都交給 J 人里長來規劃！從場地勘查、流程設計到現場執行，掌握每個環節的時間軸與突發應變，讓活動不只辦得順，更辦得讓人有感、想再來一次。我的服務包含活動企劃提案、執行統籌、廠商聯繫與現場控管。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="section-head">
+        <h2>精選作品</h2>
+      </div>
+
+      <div class="work-grid">
+
+        <article class="work-card">
+          <img class="work-image" src="assets/n-viewpoint.jpg" alt="社群經營｜教育品牌 社群貼文縮圖牆">
+          <h3>社群經營｜教育品牌</h3>
+          <p>N觀點專注於教育時事、觀點討論與多元價值探索，每月固定產出8篇專題文章與4個節目。2026年5月起全面經營 FB、IG、YouTube、Threads 四大平台，包含社群文案、圖片製作、Podcast音檔製作與行銷數據追蹤。</p>
+          <div class="work-results">
+            <div class="work-results-title">成效（5～8月，較前四個月）</div>
+            <ul>
+              <li>FB瀏覽數 66.8萬，成長 578.4%</li>
+              <li>IG瀏覽數 92.7萬，成長 823.1%</li>
+              <li>FB追蹤人數成長 36%</li>
+              <li>IG追蹤人數成長 58%</li>
+              <li>YouTube訂閱數成長 22倍</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <img class="work-image work-image--logo" src="assets/hurc.jpg" alt="活動統籌｜政府單位 講座活動現場">
+          <h3>活動統籌｜政府單位</h3>
+          <p>統籌實體及線上講座，從前期企劃發想、事前工作項目拆解與流程規劃，確保活動順利完成。並於會後產出行銷圖文宣傳、產業趨勢報告與活動精華重點文章，完整記錄講座內容價值，持續且穩定地建立雇主品牌形象。</p>
+          <div class="work-results">
+            <div class="work-results-title">成效</div>
+            <ul>
+              <li>2023年參與人數與滿意度創下歷年最高紀錄。滿意度達4.7分（滿分5分）、專業認同度4.6分（滿分5分）。</li>
+              <li>2024年擴大專案規模，邀請新加坡學者訪臺交流，成功搭建具指標性的產業共學圈平台。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <img class="work-image work-image--logo" src="assets/yc-realestate.jpeg" alt="公關議題操作與媒體關係經營｜房仲品牌">
+          <h3>公關議題操作與媒體關係經營｜房仲品牌</h3>
+          <p>主導全國性新聞稿、高階長官專欄與集團加盟品牌FB議題規劃，具備資訊萃取與文字邏輯力，能精準傳遞核心訊息。長期維繫地產、財經線媒體關係，依集團行銷節奏規劃階段性議題曝光。</p>
+          <div class="work-results">
+            <div class="work-results-title">成效</div>
+            <ul>
+              <li>2020年因應疫情停辦實體活動，靈活轉調網路新聞宣傳操作，成功帶動單月洽談數成長2倍。</li>
+              <li>2021年主導新品牌上市曝光，更創下高於競品13倍聲量及媒體出席KPI 123%之成效。</li>
+              <li>2021年針對內部課程進行精準的推廣，於短短一週內帶動報名人數滿額成效達過往的1.5倍。</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-card">
+        <h2>想跟里長泡茶聊天？</h2>
+        <p>不管是採訪寫作、媒體公關、<br class="mobile-break">社群經營或是活動企劃，<br>歡迎聊聊你的想法，一起把它變成好成果！</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:ooo.travel.32y@gmail.com">✉️ 與我聯繫</a>
+          <a class="contact-link" href="https://www.instagram.com/ooo.travel.32y/" target="_blank" rel="noopener">
+            <img src="assets/instagram-icon.webp" alt="">
+            Instagram
+          </a>
+          <a class="contact-link" href="https://www.threads.com/@ooo.travel.32y" target="_blank" rel="noopener">
+            <img src="assets/threads-icon.webp" alt="">
+            Threads
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="sign">YUN</div>
+      <div>PR &amp; MKT Freelancer</div>
+      <div class="copyright">© 2026 Yun. All rights reserved.</div>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var statNumbers = document.querySelectorAll('.stat-number');
+      if (!statNumbers.length) return;
+
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function formatValue(value, suffix) {
+        return value.toLocaleString('en-US') + suffix;
+      }
+
+      function animateCount(el) {
+        var target = parseInt(el.dataset.target, 10) || 0;
+        var suffix = el.dataset.suffix || '';
+
+        if (reduceMotion) {
+          el.textContent = formatValue(target, suffix);
+          return;
+        }
+
+        var duration = 1600;
+        var startTime = null;
+
+        function step(timestamp) {
+          if (startTime === null) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = Math.floor(eased * target);
+          el.textContent = formatValue(current, suffix);
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = formatValue(target, suffix);
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              animateCount(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+
+        statNumbers.forEach(function (el) { observer.observe(el); });
+      } else {
+        statNumbers.forEach(animateCount);
+      }
+    })();
+  </script>
+</body>
+</html>
