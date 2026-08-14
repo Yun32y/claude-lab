@@ -5,8 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yun｜PR & MKT Freelancer</title>
 <meta name="description" content="Yun｜PR & MKT Freelancer — 里長 Yun 的媒體公關與行銷接案作品集，提供採訪撰稿、社群經營、活動企劃等服務。">
+<meta name="theme-color" content="#f6f1e6">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+<!-- Open Graph / Twitter Card
+     TODO: 網站正式上線有網域後，將 og:url、og:image、twitter:image 改為絕對網址（https://your-domain/...） -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yun｜PR & MKT Freelancer">
+<meta property="og:title" content="Yun｜PR & MKT Freelancer — 媒體公關與行銷接案作品集">
+<meta property="og:description" content="里長 Yun 的媒體公關與行銷接案作品集，提供採訪撰稿、社群經營、活動企劃等服務。">
+<meta property="og:image" content="assets/yilan.jpg">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yun｜PR & MKT Freelancer — 媒體公關與行銷接案作品集">
+<meta name="twitter:description" content="里長 Yun 的媒體公關與行銷接案作品集，提供採訪撰稿、社群經營、活動企劃等服務。">
+<meta name="twitter:image" content="assets/yilan.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/yilan.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   * {
@@ -347,6 +368,68 @@
     letter-spacing: 0.03em;
   }
 
+  /* ---------- Awards ---------- */
+
+  .awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .award-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: var(--paper);
+    border-radius: 20px;
+    padding: 20px 26px;
+    border: 1px solid rgba(143,168,136,0.14);
+    box-shadow: 0 16px 40px rgba(90, 80, 60, 0.06);
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .award-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 50px rgba(143,168,136,0.18);
+  }
+
+  .award-badge {
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(217,143,111,0.14);
+    font-size: 20px;
+  }
+
+  .award-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .award-title {
+    font-size: 14.5px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .award-desc {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .award-link-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+    color: var(--sage);
+  }
+
   /* ---------- Services ---------- */
 
   .service-grid {
@@ -628,7 +711,7 @@
 
   <nav class="site-nav">
     <a class="nav-brand" href="#top">
-      <img src="assets/Logo.png" alt="Yun Logo">
+      <img src="assets/Logo.png" alt="Yun Logo" width="200" height="80" decoding="async">
       <span>Yun｜PR &amp; MKT Freelancer</span>
     </a>
     <div class="nav-links">
@@ -682,6 +765,31 @@
       </div>
     </section>
 
+    <section id="awards">
+      <div class="section-head">
+        <h2>獲獎紀錄</h2>
+      </div>
+
+      <div class="awards-list">
+        <a class="award-item" href="https://www.youtube.com/watch?v=dudEyO2t0Qs" target="_blank" rel="noopener">
+          <div class="award-badge">🏆</div>
+          <div class="award-text">
+            <div class="award-title">新北市第7屆金采獎 社會光明面節目獎</div>
+            <div class="award-desc">「台灣心動力」節目｜企劃剪輯</div>
+          </div>
+          <div class="award-link-icon">↗</div>
+        </a>
+        <a class="award-item" href="https://www.facebook.com/share/v/1B7PYKjytC/" target="_blank" rel="noopener">
+          <div class="award-badge">🎖️</div>
+          <div class="award-text">
+            <div class="award-title">入圍第19屆全國金視獎多元關懷節目獎</div>
+            <div class="award-desc">「不老時光機」節目｜企劃剪輯</div>
+          </div>
+          <div class="award-link-icon">↗</div>
+        </a>
+      </div>
+    </section>
+
     <section id="services">
       <div class="section-head">
         <h2>里民服務</h2>
@@ -711,7 +819,7 @@
       <div class="work-grid">
 
         <article class="work-card">
-          <img class="work-image" src="assets/n-viewpoint.jpg" alt="社群經營｜教育品牌 社群貼文縮圖牆">
+          <img class="work-image" src="assets/n-viewpoint.jpg" alt="社群經營｜教育品牌 社群貼文縮圖牆" loading="lazy" decoding="async">
           <h3>社群經營｜教育品牌</h3>
           <p>N觀點專注於教育時事、觀點討論與多元價值探索，每月固定產出8篇專題文章與4個節目。2026年5月起全面經營 FB、IG、YouTube、Threads 四大平台，包含社群文案、圖片製作、Podcast音檔製作與行銷數據追蹤。</p>
           <div class="work-results">
@@ -727,7 +835,7 @@
         </article>
 
         <article class="work-card">
-          <img class="work-image work-image--logo" src="assets/hurc.jpg" alt="活動統籌｜政府單位 講座活動現場">
+          <img class="work-image work-image--logo" src="assets/hurc.jpg" alt="活動統籌｜政府單位 講座活動現場" loading="lazy" decoding="async">
           <h3>活動統籌｜政府單位</h3>
           <p>統籌實體及線上講座，從前期企劃發想、事前工作項目拆解與流程規劃，確保活動順利完成。並於會後產出行銷圖文宣傳、產業趨勢報告與活動精華重點文章，完整記錄講座內容價值，持續且穩定地建立雇主品牌形象。</p>
           <div class="work-results">
@@ -740,7 +848,7 @@
         </article>
 
         <article class="work-card">
-          <img class="work-image work-image--logo" src="assets/yc-realestate.jpeg" alt="公關議題操作與媒體關係經營｜房仲品牌">
+          <img class="work-image work-image--logo" src="assets/yc-realestate.jpeg" alt="公關議題操作與媒體關係經營｜房仲品牌" loading="lazy" decoding="async">
           <h3>公關議題操作與媒體關係經營｜房仲品牌</h3>
           <p>主導全國性新聞稿、高階長官專欄與集團加盟品牌FB議題規劃，具備資訊萃取與文字邏輯力，能精準傳遞核心訊息。長期維繫地產、財經線媒體關係，依集團行銷節奏規劃階段性議題曝光。</p>
           <div class="work-results">

@@ -2,3 +2,4 @@
 .env*
 .DS_Store
 assets/快速認識我的履歷.pdf
+.playwright-mcp/
