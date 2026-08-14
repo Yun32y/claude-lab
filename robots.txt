@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://yun32y.vercel.app/sitemap.xml
