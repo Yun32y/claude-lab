@@ -447,12 +447,40 @@
   }
 
   .service-item {
+    position: relative;
     background: var(--paper);
     border-radius: 24px;
     box-shadow: 0 20px 50px rgba(90, 80, 60, 0.08);
     padding: clamp(28px, 4vw, 36px);
     border: 1px solid rgba(143,168,136,0.14);
     text-align: center;
+  }
+
+  .service-item--linked {
+    padding-bottom: 56px;
+  }
+
+  .service-arrow-link {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    min-height: 34px;
+    border-radius: 50%;
+    background: rgba(217,143,111,0.14);
+    color: var(--terracotta);
+    font-size: 15px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .service-arrow-link:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(217,143,111,0.28);
   }
 
   .service-item h3 {
@@ -709,6 +737,12 @@
       height: 44px;
       min-height: 44px;
     }
+
+    .service-arrow-link {
+      width: 44px;
+      height: 44px;
+      min-height: 44px;
+    }
   }
 </style>
 </head>
@@ -805,9 +839,10 @@
       </div>
 
       <div class="service-grid">
-        <div class="service-item">
+        <div class="service-item service-item--linked">
           <h3>採訪撰稿與文字企劃</h3>
           <p>曾任第一線媒體記者，練就了扎實的文字基本功與精準的下標敏銳度。擅長針對不同受眾切換口吻，面對企業客戶（To B）端出邏輯清晰的專業論點；面對一般大眾（To C）寫出易懂、有共鳴的好故事，幫你把話精準說進受眾心坎裡。</p>
+          <a class="service-arrow-link" href="writing.html" target="_blank" rel="noopener" title="查看採訪撰稿與文字企劃作品集" aria-label="查看採訪撰稿與文字企劃作品集">↗</a>
         </div>
         <div class="service-item">
           <h3>社群經營與行銷</h3>

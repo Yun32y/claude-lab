@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採訪撰稿與文字企劃作品集｜Yun PR &amp; MKT Freelancer</title>
+<meta name="description" content="Yun 的採訪撰稿與文字企劃作品集，收錄人物專訪、主題採訪與專業知識轉譯等文字內容案例。">
+<meta name="theme-color" content="#f6f1e6">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+<link rel="canonical" href="https://yun32y.vercel.app/writing.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --ink: #3b3a35;
+    --muted: #8a8578;
+    --paper: #fffdf8;
+    --sage: #8fa888;
+    --terracotta: #d98f6f;
+    --line: rgba(143,168,136,0.25);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", "Noto Sans TC", "Hiragino Sans", "PingFang TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(160deg, #f6f1e6 0%, #eaf1e4 45%, #f6e7dc 100%);
+    min-height: 100vh;
+    line-height: 1.85;
+    letter-spacing: 0.02em;
+    overflow-x: hidden;
+  }
+
+  /* ---------- Nav ---------- */
+
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 28px;
+    background: rgba(255, 253, 248, 0.82);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--ink);
+    min-width: 0;
+  }
+
+  .nav-brand img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .nav-brand span {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 48vw;
+  }
+
+  .nav-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .nav-back:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(143,168,136,0.22);
+  }
+
+  /* ---------- Layout ---------- */
+
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 24px 100px;
+  }
+
+  .wrap--top {
+    padding-top: 64px;
+  }
+
+  .category {
+    margin-bottom: 64px;
+  }
+
+  .category-head {
+    margin-bottom: 24px;
+  }
+
+  .category-head h2 {
+    font-size: clamp(20px, 2.8vw, 26px);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    margin-bottom: 8px;
+  }
+
+  .category-head p {
+    font-size: 13.8px;
+    color: var(--muted);
+    line-height: 1.9;
+  }
+
+  .piece-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .piece-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--paper);
+    border-radius: 18px;
+    padding: 18px 24px;
+    border: 1px solid rgba(143,168,136,0.14);
+    box-shadow: 0 16px 40px rgba(90, 80, 60, 0.06);
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .piece-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 50px rgba(143,168,136,0.18);
+  }
+
+  .piece-title {
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+  }
+
+  .piece-arrow {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(217,143,111,0.14);
+    color: var(--terracotta);
+    font-size: 15px;
+  }
+
+  /* ---------- Footer ---------- */
+
+  footer.site-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding-bottom: 60px;
+    letter-spacing: 0.03em;
+  }
+
+  footer.site-footer .sign {
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  footer.site-footer .copyright {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+
+  @media (max-width: 480px) {
+    .nav-brand span {
+      display: none;
+    }
+
+    .piece-item {
+      padding: 16px 18px;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="index.html#top">
+      <img src="assets/Logo.png" alt="Yun Logo" width="200" height="80" decoding="async">
+      <span>Yun｜PR &amp; MKT Freelancer</span>
+    </a>
+    <a class="nav-back" href="index.html#services">← 回首頁</a>
+  </nav>
+
+  <div class="wrap wrap--top">
+
+    <section class="category">
+      <div class="category-head">
+        <h2>人物專訪</h2>
+        <p>在地小人物故事、房仲品牌經紀人報導與高階主管專欄等內容。</p>
+      </div>
+      <div class="piece-list">
+        <a class="piece-item" href="https://youtu.be/XddR4d1UXu0?si=2gIjwlXz6hH9bK-d" target="_blank" rel="noopener">
+          <span class="piece-title">里長蘿蔔糕 有故事又有人情味</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://youtu.be/YZdWp1Eye1I?si=JEtxRfauFrGeLUb6" target="_blank" rel="noopener">
+          <span class="piece-title">另類「里民服務處」 里長賣土雞搏感情</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://cnews.com.tw/124211022a05/" target="_blank" rel="noopener">
+          <span class="piece-title">聯賣發威！台慶不動產黃俊衡半年收入破百萬 自由財富加倍</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://tw.news.yahoo.com/28%E6%AD%B2%E5%89%B5%E6%A5%AD%E6%B0%B8%E6%85%B6%E4%B8%8D%E5%8B%95%E7%94%A2-%E8%94%A1%E5%8F%94%E6%9C%8B%E5%B8%B6%E9%A0%981%E5%BA%97-10%E5%B9%B4%E5%89%B5%E9%80%A04-6%E5%84%84%E5%85%83%E6%A5%AD%E7%B8%BE-234254580.html" target="_blank" rel="noopener">
+          <span class="piece-title">28歲創業永慶不動產 蔡叔朋帶領1店、10年創造4.6億元業績</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://www.ctee.com.tw/news/20220405700225-430601" target="_blank" rel="noopener">
+          <span class="piece-title">葉凌棋｜升息風起！剖析2022房市變化</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="category">
+      <div class="category-head">
+        <h2>主題採訪</h2>
+        <p>針對品牌議題、趨勢或活動，進行多面向的採訪或數據資料梳理，產出脈絡清晰、觀點獨到且具說服力的深度內容。</p>
+      </div>
+      <div class="piece-list">
+        <a class="piece-item" href="https://www.cna.com.tw/postwrite/chi/310679" target="_blank" rel="noopener">
+          <span class="piece-title">桃園機捷通車五周年 一表看懂15站房價漲跌</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://estate.ltn.com.tw/article/13785" target="_blank" rel="noopener">
+          <span class="piece-title">兩項優點讓廟宇不嫌惡 雙北兩大媽祖廟周邊買氣旺</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://blog.wellcare-global.com/business/new-generation-through-mo" target="_blank" rel="noopener">
+          <span class="piece-title">Gen Z values and their unstoppable impact: Understanding the new generation through Maison &amp; Objet</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://blog.wellcare-global.com/blog/electric-overblanket-vs-underblanket-a-comparison" target="_blank" rel="noopener">
+          <span class="piece-title">Electric overblanket vs underblanket: A comparison</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://blog.wellcare-global.com/business/electric-blanket-reviews" target="_blank" rel="noopener">
+          <span class="piece-title">2020 report analyzing electric blanket reviews reveals eight major trends that consumers aren't telling you</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="category">
+      <div class="category-head">
+        <h2>專業知識轉譯</h2>
+        <p>針對受眾調整語氣與溝通風格，幫你把專業知識內容，轉化成親民、好懂的文章。</p>
+      </div>
+      <div class="piece-list">
+        <a class="piece-item" href="https://blog.wellcare-global.com/blog/self-care-during-a-pandemic" target="_blank" rel="noopener">
+          <span class="piece-title">Self-care during a pandemic: protecting those around you starts from caring for yourself</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://blog.wellcare-global.com/blog/cant-sleep-with-cold-feet-and-hands" target="_blank" rel="noopener">
+          <span class="piece-title">Can't sleep with cold feet and hands? here's how to stay warm</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+        <a class="piece-item" href="https://blog.wellcare-global.com/blog/meet-wellcare-in-mo" target="_blank" rel="noopener">
+          <span class="piece-title">Welcome To The Comfort Zone: 4D DWF Natural Living Space Promotes Quality and Joyful Living</span>
+          <span class="piece-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="sign">YUN</div>
+    <div>PR &amp; MKT Freelancer</div>
+    <div class="copyright">© 2026 Yun. All rights reserved.</div>
+  </footer>
+</body>
+</html>
