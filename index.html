@@ -28,7 +28,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="assets/yilan.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/yilan-640.webp" media="(max-width: 640px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/yilan-1280.webp" media="(min-width: 641px) and (max-width: 1280px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/yilan.webp" media="(min-width: 1281px)" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   * {
@@ -215,9 +217,21 @@
     min-height: 82vh;
     display: flex;
     align-items: flex-end;
-    background-image: linear-gradient(180deg, rgba(59,58,53,0.2) 0%, rgba(59,58,53,0.58) 72%, rgba(59,58,53,0.8) 100%), url("assets/yilan.jpg");
+    background-image: linear-gradient(180deg, rgba(59,58,53,0.2) 0%, rgba(59,58,53,0.58) 72%, rgba(59,58,53,0.8) 100%), url("assets/yilan-640.webp");
     background-size: cover;
     background-position: center;
+  }
+
+  @media (min-width: 641px) and (max-width: 1280px) {
+    .hero-photo {
+      background-image: linear-gradient(180deg, rgba(59,58,53,0.2) 0%, rgba(59,58,53,0.58) 72%, rgba(59,58,53,0.8) 100%), url("assets/yilan-1280.webp");
+    }
+  }
+
+  @media (min-width: 1281px) {
+    .hero-photo {
+      background-image: linear-gradient(180deg, rgba(59,58,53,0.2) 0%, rgba(59,58,53,0.58) 72%, rgba(59,58,53,0.8) 100%), url("assets/yilan.webp");
+    }
   }
 
   .hero-inner {
@@ -793,15 +807,15 @@
       <div class="stats-grid">
         <div class="stat-item">
           <div class="stat-number" data-target="1000" data-suffix="+">0</div>
-          <div class="stat-label">採訪報導、文章</div>
+          <div class="stat-label">累計採訪報導、文章</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-target="50" data-suffix="+">0</div>
-          <div class="stat-label">籌辦活動場次</div>
+          <div class="stat-label">累計籌辦活動場次</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-target="4" data-suffix="">0</div>
-          <div class="stat-label">經營社群帳號</div>
+          <div class="stat-label">累計經營社群帳號</div>
         </div>
         <div class="stat-item">
           <div class="stat-number" data-target="10000" data-suffix="+">0</div>
