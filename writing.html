@@ -188,6 +188,32 @@
     font-size: 15px;
   }
 
+  /* ---------- CTA ---------- */
+
+  .cta-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    background: var(--terracotta);
+    color: #fffdf8;
+    box-shadow: 0 12px 26px rgba(217,143,111,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+  }
+
   /* ---------- Footer ---------- */
 
   footer.site-footer {
@@ -311,6 +337,10 @@
         </a>
       </div>
     </section>
+
+    <div class="cta-row">
+      <a class="btn-primary" href="https://forms.gle/fpZkexfaykR5wiPf6" target="_blank" rel="noopener">預約里長泡茶聊天</a>
+    </div>
 
   </div>
 
