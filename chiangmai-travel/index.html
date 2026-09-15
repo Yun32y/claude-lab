@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2027 清邁旅遊｜6天5夜自由行 | 行前資訊與願望清單調查</title>
+<meta name="description" content="2027 年 1 月清邁旅遊行前資訊：航班天氣、住宿分區、市集攻略，並填寫行程願望清單表單。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* 泰北度假風配色：大地色、綠意、暖橘、木質調 */
+    --color-bg: #FBF3E7;
+    --color-bg-alt: #F1E3CC;
+    --color-card: #FFFCF6;
+    --color-primary: #C1652F;
+    --color-primary-dark: #9F4E22;
+    --color-secondary: #4B6B43;
+    --color-secondary-dark: #38512F;
+    --color-wood: #8B5E3C;
+    --color-night: #5C4A73;
+    --color-info: #3E7C8A;
+    --color-text: #3B2A1D;
+    --color-text-muted: #6E5A47;
+    --color-border: #E2CFAE;
+    --color-white: #FFFFFF;
+    --shadow-soft: 0 10px 30px rgba(59, 42, 29, 0.1);
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 10px;
+    --max-width: 1080px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 24px 80px;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, rgba(37, 26, 18, 0.35) 0%, rgba(37, 26, 18, 0.5) 55%, rgba(37, 26, 18, 0.72) 100%), url("assets/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #FFFBF3;
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #FFFBF3;
+    padding: 6px 18px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 6vw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.3;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+  }
+
+  .hero p {
+    margin-top: 20px;
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    max-width: 560px;
+    color: rgba(255, 251, 243, 0.92);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-gif {
+    margin-top: 16px;
+    width: 140px;
+    border-radius: var(--radius-md);
+    border: 2px solid rgba(255, 251, 243, 0.5);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-scroll {
+    margin-top: 56px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #FFFBF3;
+    text-decoration: none;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    animation: bounceDown 2s ease-in-out infinite;
+  }
+
+  .hero-scroll span.arrow {
+    font-size: 1.4rem;
+  }
+
+  @keyframes bounceDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+
+  /* ---------- Section base ---------- */
+  .section {
+    padding: 72px 0;
+  }
+
+  .section--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 44px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+    font-weight: 900;
+    color: var(--color-primary-dark);
+  }
+
+  .section-header p {
+    margin-top: 12px;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ---------- 卡片共用樣式 ---------- */
+  .card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .grid--2 { grid-template-columns: repeat(2, 1fr); }
+    .grid--3 { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* ---------- 航班與氣候 ---------- */
+  .flight-table-wrap {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .flight-table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+  }
+
+  .flight-table th {
+    text-align: left;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    padding: 0 14px 12px;
+    border-bottom: 2px solid var(--color-border);
+    white-space: nowrap;
+  }
+
+  .flight-table td {
+    padding: 16px 14px;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+    font-size: 0.95rem;
+  }
+
+  .flight-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .flight-table .airline-name,
+  .flight-table .airline-code,
+  .flight-table td:nth-child(3),
+  .flight-table td:nth-child(4) {
+    white-space: nowrap;
+  }
+
+  .flight-table .airline-code {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+  }
+
+  .flight-table td:nth-child(3) span,
+  .flight-table td:nth-child(4) span {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+
+  .flight-table td p {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    margin-top: 6px;
+    white-space: normal;
+    text-align: justify;
+  }
+
+  .flight-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 999px;
+    color: var(--color-white);
+    white-space: nowrap;
+  }
+
+  .flight-badge.badge--morning { background: var(--color-primary); }
+  .flight-badge.badge--noon { background: var(--color-secondary); }
+  .flight-badge.badge--night { background: var(--color-night); }
+
+  .flight-table-note {
+    margin-top: 16px;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+  }
+
+  .info-box {
+    margin-top: 28px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 640px) {
+    .info-box { grid-template-columns: 1fr 1fr; }
+  }
+
+  .info-box .card p {
+    text-align: justify;
+  }
+
+  .info-box .card h3 {
+    color: var(--color-secondary-dark);
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+  }
+
+  .weather-stats {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+
+  .weather-stat {
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-sm);
+    padding: 10px 16px;
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .weather-stat strong {
+    display: block;
+    font-size: 1.3rem;
+    color: var(--color-primary-dark);
+  }
+
+  .weather-stat span {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+  }
+
+  /* ---------- 住宿區域 ---------- */
+  .map-figure {
+    margin-bottom: 36px;
+  }
+
+  .map-image-wrap {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .map-image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .map-caption {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+
+  .area-card {
+    position: relative;
+    border-left: 4px solid var(--color-secondary);
+  }
+
+  .area-card h3 {
+    color: var(--color-secondary-dark);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .area-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+
+  .area-highlights-label {
+    margin-top: 14px;
+    font-weight: 700;
+    color: var(--color-secondary-dark);
+    font-size: 0.88rem;
+  }
+
+  .area-highlights {
+    margin-top: 8px;
+    padding-left: 18px;
+  }
+
+  .area-highlights li {
+    color: var(--color-text-muted);
+    font-size: 0.88rem;
+    margin-bottom: 6px;
+    text-align: justify;
+  }
+
+  .area-highlights li:last-child {
+    margin-bottom: 0;
+  }
+
+  .area-highlights a,
+  .area-highlights strong {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .area-highlights a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- 市集依日期分區 ---------- */
+  .market-day-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 640px) {
+    .market-day-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .market-day-card {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: 24px;
+  }
+
+  .market-day-badge {
+    display: inline-block;
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 5px 18px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+
+  .market-day-badge.badge--weekday { background: var(--color-secondary); }
+  .market-day-badge.badge--sat { background: var(--color-info); }
+  .market-day-badge.badge--sun { background: var(--color-primary); }
+  .market-day-badge.badge--daily { background: var(--color-night); }
+
+  .market-day-item {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.92rem;
+  }
+
+  .market-day-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .market-day-item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .market-day-name {
+    color: var(--color-text);
+  }
+
+  .market-day-time {
+    flex-shrink: 0;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .market-day-desc {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    margin-top: 4px;
+    text-align: justify;
+  }
+
+  .must-visit-badge {
+    display: inline-block;
+    background: #E5A32B;
+    color: var(--color-text);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-left: 6px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  /* ---------- 市集攻略 ---------- */
+  .market-subtitle {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin: 32px 0 16px;
+    font-size: 1.1rem;
+  }
+
+  .market-subtitle:first-of-type {
+    margin-top: 0;
+  }
+
+  .market-item {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .card .market-item:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .market-item h3 {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 4px;
+  }
+
+  .market-item .market-schedule {
+    color: var(--color-secondary-dark);
+    font-weight: 500;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+
+  .market-item p {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    text-align: justify;
+  }
+
+  /* ---------- 自由行前準備 ---------- */
+  .prep-card h3 {
+    color: var(--color-secondary-dark);
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+  }
+
+  .prep-card p {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    text-align: justify;
+  }
+
+  .prep-card p + p {
+    margin-top: 10px;
+  }
+
+  .prep-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+  }
+
+  .prep-link:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- 表單區 ---------- */
+  .form-section {
+    background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+  }
+
+  .trip-form {
+    background: var(--color-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
+    padding: clamp(24px, 5vw, 44px);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .form-field {
+    margin-bottom: 30px;
+    border: none;
+    padding: 0;
+  }
+
+  .form-field legend,
+  .form-label {
+    display: block;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .form-field .field-hint {
+    display: block;
+    font-weight: 400;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    margin-top: 2px;
+  }
+
+  .text-input,
+  .textarea-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 1rem;
+    background: var(--color-white);
+    color: var(--color-text);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .text-input:focus,
+  .textarea-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(193, 101, 47, 0.15);
+  }
+
+  .textarea-input {
+    min-height: 110px;
+    resize: vertical;
+  }
+
+  .choice-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .choice-input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+  }
+
+  .choice-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1.5px solid var(--color-wood);
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.92rem;
+    color: var(--color-text);
+    background: var(--color-white);
+    transition: all 0.18s ease;
+    user-select: none;
+  }
+
+  .choice-label:hover {
+    border-color: var(--color-primary);
+  }
+
+  .choice-input:checked + .choice-label {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 500;
+  }
+
+  .choice-input:focus-visible + .choice-label {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+  }
+
+  .field-error {
+    display: none;
+    color: #B3261E;
+    font-size: 0.82rem;
+    margin-top: 8px;
+  }
+
+  .form-field.has-error .field-error {
+    display: block;
+  }
+
+  .form-field.has-error .choice-label {
+    border-color: #B3261E;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-white);
+    background: var(--color-primary);
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .submit-btn:hover {
+    background: var(--color-primary-dark);
+  }
+
+  .submit-btn:active {
+    transform: scale(0.98);
+  }
+
+  /* ---------- 送出後摘要 ---------- */
+  .form-success {
+    display: none;
+    text-align: center;
+  }
+
+  .form-success.is-visible {
+    display: block;
+  }
+
+  .trip-form.is-submitted .form-fields {
+    display: none;
+  }
+
+  .form-success .icon {
+    font-size: 2.8rem;
+    margin-bottom: 12px;
+  }
+
+  .form-success h3 {
+    font-size: 1.3rem;
+    color: var(--color-secondary-dark);
+    margin-bottom: 8px;
+  }
+
+  .summary-list {
+    text-align: left;
+    list-style: none;
+    margin: 24px 0;
+    padding: 0;
+  }
+
+  .summary-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.92rem;
+  }
+
+  .summary-list li:last-child {
+    border-bottom: none;
+  }
+
+  .summary-list strong {
+    display: block;
+    color: var(--color-primary-dark);
+    margin-bottom: 4px;
+    font-size: 0.85rem;
+  }
+
+  .reset-btn {
+    margin-top: 8px;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-primary-dark);
+    background: transparent;
+    border: 1.5px solid var(--color-primary-dark);
+    border-radius: 999px;
+    cursor: pointer;
+  }
+
+  .reset-btn:hover {
+    background: var(--color-bg-alt);
+  }
+
+  /* ---------- Footer ---------- */
+  .site-footer {
+    text-align: center;
+    padding: 32px 24px;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    background: var(--color-bg);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .fade-in { transition: none; opacity: 1; transform: none; }
+    .hero-scroll { animation: none; }
+  }
+
+  /* ---------- 背景音樂按鈕 ---------- */
+  .music-toggle {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+
+  .music-toggle:hover {
+    background: var(--color-primary-dark);
+  }
+
+  .music-toggle:active {
+    transform: scale(0.96);
+  }
+
+  .music-toggle .music-icon {
+    font-size: 1rem;
+  }
+
+  .music-toggle:not(.is-playing) .music-icon.icon-on,
+  .music-toggle.is-playing .music-icon.icon-off {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+  <!-- 背景音樂 -->
+  <audio id="bgMusic" src="assets/hero-bgm.m4a" loop preload="auto"></audio>
+  <button type="button" class="music-toggle" id="musicToggle" aria-pressed="false">
+    <span class="music-icon icon-on" aria-hidden="true">🔊</span>
+    <span class="music-icon icon-off" aria-hidden="true">🔇</span>
+    <span class="music-label">播放音樂</span>
+  </button>
+
+  <!-- 頁首區塊 -->
+  <header class="hero">
+    <span class="hero-eyebrow">都是P人居多的快樂旅遊團</span>
+    <h1>2027 清邁旅遊｜6天5夜自由行</h1>
+    <p>在出發前，請先看看里長整理的清邁簡介，說出你的願望吧！<br>소원을 말해봐</p>
+    <img class="hero-gif" src="assets/genie-dance.webp" alt="少女時代《소원을 말해봐》跳舞動圖" loading="lazy" width="280" height="163">
+    <a href="#prep" class="hero-scroll">
+      <span>先了解一下清邁</span>
+      <span class="arrow">↓</span>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- 清邁自由行前準備 -->
+    <section id="prep" class="section section--alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>🧳 清邁自由行前準備</h2>
+          <p>出發前必看的簽證、入境、換匯、保險與交通懶人包。</p>
+        </div>
+
+        <div class="grid grid--2 fade-in">
+          <div class="card prep-card">
+            <h3>🛂 台灣免簽</h3>
+            <p>台灣護照享有入境泰國免簽證待遇，每次最長可以停留高達 60 天。</p>
+          </div>
+
+          <div class="card prep-card">
+            <h3>📱 TDAC 數位入境卡（有中文）</h3>
+            <p>泰國政府現在已經全面廢除紙本入境卡，改為「TDAC 數位入境卡」。所有旅客必須在抵達泰國前 72 小時內，自己上網填寫航班資訊、住宿地址與個人資料。填完後會收到一個 QR Code，過海關時連同護照一起出示給官員掃描。</p>
+            <a class="prep-link" href="https://tdac.immigration.go.th/arrival-card/#/home" target="_blank" rel="noopener">前往 TDAC 線上填寫 →</a>
+          </div>
+
+          <div class="card prep-card">
+            <h3>💱 泰銖換匯策略</h3>
+            <p>目前泰銖跟台幣的匯率大約維持在 1:1 到 1:0.9 之間，其實非常接近。建議在台灣的銀行先換個一兩千塊泰銖帶在身上，用來支付剛下飛機的計程車費或是買杯手搖飲就好，剩下直接帶著「新台幣千元大鈔」來清邁當地換最划算。</p>
+            <p>推薦古城區的塔佩門附近綠色的 Super Rich，那裡匯率通常是全清邁最好的。</p>
+          </div>
+
+          <div class="card prep-card">
+            <h3>🛡️ 旅遊保險</h3>
+            <p>建議不管國旅還是國外旅行一定要買保險！可自行找自己配合的保險公司保旅平險和不便險。</p>
+          </div>
+
+          <div class="card prep-card">
+            <h3>🛺 交通</h3>
+            <p>清邁自由行不像曼谷那樣有捷運，觀光客會使用的交通為 Grab 叫車、雙條車、嘟嘟車，也有客製化包車或一日遊等選擇。人多建議 Grab、客製化包車或一日遊。</p>
+            <p>註冊 Grab 需要一組泰國電話號碼，建議購買有通話功能的 SIM 卡，像是泰國 True 5G SIM 卡含通話。</p>
+            <a class="prep-link" href="https://s.klook.com/c/5yKl9VQJ3b" target="_blank" rel="noopener">前往 Klook 購買泰國 SIM 卡 →</a>
+          </div>
+
+          <div class="card prep-card">
+            <h3>🔌 泰國插座電壓</h3>
+            <p>泰國使用的插座型式主要為 A、B、C 型，各大飯店或民宿的插座型態可能不一樣。A 型（台灣常見形式，兩個扁腳）、B 型（台灣常見形式，兩個扁腳加一個接地線的三插頭），但 C 型就與台灣完全不同，因此建議攜帶萬國轉接頭最方便。不論是飯店、民宿或咖啡廳，有時插孔種類不一致，萬國轉接頭能避免充電時與插座不合的狀況。</p>
+            <p>泰國電壓為 220V，而台灣為 110V。多數手機、筆電、相機充電器都支援 100–240V，因此不需額外變壓器。但像是吹風機、電棒捲、離子夾、刮鬍刀等美容電器，使用前請確認是否支援國際電壓，若非國際電壓建議攜帶變壓器，以免電壓過高損壞設備。</p>
+            <a class="prep-link" href="https://www.outo.co/blogs/articles/thailand-travel-prep" target="_blank" rel="noopener">延伸閱讀：泰國旅遊行前準備 →</a>
+          </div>
+
+          <div class="card prep-card">
+            <h3>🧴 防曬、防蚊與醫藥用品</h3>
+            <p>泰國陽光強烈、氣候潮濕，防曬乳、防蚊液絕對是行李清單必備。且泰國為登革熱感染風險國家，若要前往郊區或叢林活動（如清邁大象公園、叢林飛索等），一定要加強防蚊措施，避免被蚊蟲叮咬。</p>
+            <p>常用藥品也別忘記啦！建議準備：暈車藥、止痛藥、腸胃藥、過敏藥等，若有特殊或慢性疾病也要攜帶足量藥物及醫師證明（若遇到抽查可提供證明），以防萬一。</p>
+          </div>
+
+          <div class="card prep-card">
+            <h3>🧾 退稅須知</h3>
+            <p>在泰國清邁購物後要辦理退稅（VAT Refund）：</p>
+            <p>✅ 單本護照購物未滿 20,000 泰銖：可直接到機場退稅櫃檯辦理，不需海關蓋章。</p>
+            <p>✅ 單本護照購物超過 20,000 泰銖：需攜帶購買商品至海關檢查，先取得海關印章後，才能辦理退稅。</p>
+            <p>⚠️ 建議提早抵達機場，尤其購買精品、名牌包、3C 產品等高單價商品，海關可能會要求現場出示商品檢查。</p>
+            <p>清邁機場退稅流程：海關檢查（超過 20,000 泰銖者）→ 辦理登機 → 退稅櫃檯領取退稅款項</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 航班與氣候指南 -->
+    <section id="flight-weather" class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>✈️ 行前須知：航班與天氣</h2>
+        </div>
+
+        <div class="flight-table-wrap fade-in">
+          <table class="flight-table">
+            <thead>
+              <tr>
+                <th>航空公司</th>
+                <th>英文名稱</th>
+                <th>去程 TPE → CNX</th>
+                <th>回程 CNX → TPE</th>
+                <th>行程特色</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="airline-name">中華航空</td>
+                <td class="airline-code">China Airlines</td>
+                <td>CI851<span>07:30–10:20</span><span>每天</span></td>
+                <td>CI852<span>11:20–16:00</span><span>每天</span></td>
+                <td>
+                  <span class="flight-badge badge--morning">早去午回</span>
+                  <p>一早出發，抵達後剛好可以吃午餐並開始行程。</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="airline-name">長榮航空</td>
+                <td class="airline-code">EVA Air</td>
+                <td>BR257<span>07:40–10:25</span><span>每天</span></td>
+                <td>BR258<span>11:30–16:35</span><span>每天</span></td>
+                <td>
+                  <span class="flight-badge badge--morning">早去午回</span>
+                  <p>與華航時間相近，第一天能將時間最大化。</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="airline-name">星宇航空</td>
+                <td class="airline-code">STARLUX</td>
+                <td>JX751<span>13:05–16:05</span><span>週二、三、四、六、日</span></td>
+                <td>JX752<span>17:15–22:15</span><span>週二、三、四、六、日</span></td>
+                <td>
+                  <span class="flight-badge badge--noon">午去晚回</span>
+                  <p>不用凌晨趕機場，最後一天還能從容吃個下午茶再前往機場。</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="airline-name">泰國亞洲航空</td>
+                <td class="airline-code">AirAsia</td>
+                <td>FD243<span>18:55–21:45</span><span>週一、三、四、五、六、日</span></td>
+                <td>FD242<span>01:50–06:40</span><span>週一、三、四、五、六、日</span></td>
+                <td>
+                  <span class="flight-badge badge--night">晚去紅眼回</span>
+                  <p>適合下班後直奔機場，且最後一天可玩到半夜；但須評估體力。</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="flight-table-note">備註：各航班時間與營運日期可能隨航空公司季節班表微調，亞航回程也有凌晨 00:05 起飛的班次，實際起降時間與班期請以購票當下官方公告為準。</p>
+        </div>
+
+        <div class="info-box fade-in">
+          <div class="card">
+            <h3>🌤️ 1 月份天氣</h3>
+            <p>清邁的「涼季」，全年最舒服的季節！降雨機率低，很適合戶外行程。</p>
+            <div class="weather-stats">
+              <div class="weather-stat">
+                <strong>28–30°C</strong>
+                <span>白天氣溫</span>
+              </div>
+              <div class="weather-stat">
+                <strong>15–18°C</strong>
+                <span>夜間氣溫</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3>👕 穿搭建議</h3>
+            <p>強烈建議「洋蔥式穿搭」：白天以夏裝為主，早晚及山區務必準備薄外套；參訪寺廟需有袖上衣與過膝長褲或長裙。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 住宿區域特色 -->
+    <section id="accommodation" class="section section--alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>🗺️ 清邁四大區域解析</h2>
+        </div>
+
+        <figure class="map-figure fade-in">
+          <div class="map-image-wrap">
+            <img src="assets/chiangmai-regions-map.jpeg" alt="清邁區域特色地圖：尼曼區商圈、古城區與塔佩門、夜生活熱鬧區、郊區與大自然" loading="lazy" width="1600" height="872">
+          </div>
+          <figcaption class="map-caption">相對位置示意圖，未包含西北方湄登區，實際地標位置請以 Google Maps 為準！</figcaption>
+        </figure>
+
+        <div class="grid grid--2 fade-in">
+          <div class="card area-card">
+            <h3>尼曼區 Nimman</h3>
+            <p>清邁版的「弘大商圈」，潮流文青大本營。咖啡廳、設計選物店、酒吧林立，生活機能最現代。</p>
+            <p class="area-highlights-label">代表景點</p>
+            <ul class="area-highlights">
+              <li><a href="https://www.wendyjourney.com/one-nimman/" target="_blank" rel="noopener">尼曼一號 One Nimman</a>：融合歐風建築、藝術設計、咖啡美食與文創小店的複合式商場。旁邊尼曼路一巷內有白色市集 White Market。</li>
+              <li><a href="https://www.bring-you.info/zh-tw/nimman" target="_blank" rel="noopener">寧曼路商圈</a>：1 到 17 巷特色巷弄</li>
+              <li><a href="https://kenji.life/maya-chiang-mai/" target="_blank" rel="noopener">Maya 百貨</a>：尼曼路與 Huay Kaew 路交叉口，是清邁最潮流的現代化購物商場</li>
+            </ul>
+            <p class="area-highlights-label">按摩店</p>
+            <ul class="area-highlights">
+              <li><a href="https://chillpotato.com/chiang-mai-cheeva-spa/" target="_blank" rel="noopener">Cheeva Spa</a>：療程前會先填表單，可以針對自己需求調整力度。迎賓飲料是水果蘇打、按摩後點心有熱茶和芒果糯米飯。按摩店旁邊有賣抹茶的店。</li>
+              <li><a href="https://mamahuhu.blog/overseas/vintage-thai-massage/" target="_blank" rel="noopener">Vintage Thai Massage 2 Nimman Soi 5</a>：高 CP 值泰式按摩，提前透過臉書線上預約喔！</li>
+              <li><a href="https://tsnio.com/fah-lanna-spa/" target="_blank" rel="noopener">Fah Lanna Spa</a>：有古城、寧曼、夜市三間分店，每間店裝潢氛圍都不同。有提供泰式按摩、足部按摩、精油按摩、藥草球按摩、敲筋按摩等服務。</li>
+            </ul>
+          </div>
+          <div class="card area-card">
+            <h3>夜市區 Night Bazaar</h3>
+            <p>緊鄰湄平河，夜生活熱鬧。下樓就是美食攤販與平價按摩。</p>
+            <p class="area-highlights-label">代表景點</p>
+            <ul class="area-highlights">
+              <li><a href="https://journey.tw/chiang-mai-night-bazaar/" target="_blank" rel="noopener">長康路夜市</a>：位在古城東側，每天晚上都有營業，攤位多又熱鬧，附近也有不少按摩店。</li>
+              <li><a href="https://almablog.tw/blog/post/warorot-market" target="_blank" rel="noopener">瓦洛洛市場</a>：清邁最大乾貨零食市場，離<a href="https://ericgo.com/thailand-chiangmai-changmoiroad/" target="_blank" rel="noopener">藤編一條街</a>很近，可以安排在一起。</li>
+              <li><a href="https://www.wendyjourney.com/jing-jai-market/" target="_blank" rel="noopener">清邁真心市集 Jing Jai Market</a>：當地最人氣的周末市集，充滿文青的氛圍超好逛，有許多手工藝品、亞麻衣服、藤編包包、手做飾品等攤位。</li>
+              <li><a href="https://journey.tw/coconut-market/" target="_blank" rel="noopener">椰林市集 Coconut Market</a>：位置湄平河右側上方，坐落在高聳椰子林中的週末限定文青市集，中午過後許多攤位就開始收攤了。</li>
+              <li><a href="https://journey.tw/chamcha-market/" target="_blank" rel="noopener">雨樹市集 Chamcha Market</a>：買泰北藍染與服飾、手工藝品的好地方，有一點華山松菸感，但更漂亮。市集尾端的 Meena Rice Based Cuisine，這家店以其精緻的泰北草本料理聞名，更曾連續多年榮獲米其林必比登推薦。</li>
+            </ul>
+          </div>
+          <div class="card area-card">
+            <h3>古城區與塔佩門 Old City &amp; Thapae</h3>
+            <p>歷史核心區。護城河環繞，步調悠閒，古寺與傳統老店聚集。進入寺廟不可穿短褲、短裙、洞洞褲、無袖背心、露肩露背裝等。</p>
+            <p class="area-highlights-label">代表景點</p>
+            <ul class="area-highlights">
+              <li><a href="https://journey.tw/chiang-mais-ancient-gateway/" target="_blank" rel="noopener">塔佩門</a>：古城區熱門打卡點，許多遊客會租借泰服在此拍照。雖然拍出來很仙，但現場滿地鳥屎味，而且當成群的鴿子被嚇飛時，漫天塵土和羽毛真的不太衛生，過敏兒請務必戴好口罩。平日上午或傍晚人潮相對較少，週日傍晚起塔佩門廣場會成為清邁週日夜市的起點。</li>
+              <li><a href="https://chillpotato.com/wat-chedi-luang/" target="_blank" rel="noopener">柴迪隆寺</a>：寺廟中央的四方形大佛塔，是清邁歷史標誌性的建築之一，也是地位最高的寺廟建築。除了大佛塔，大殿裡的金箔佛像也是必看的重點，也很適合穿泰服拍照喔。門票每人 50 泰銖。</li>
+              <li><a href="https://journey.tw/wat-phra-singh/" target="_blank" rel="noopener">帕邢寺</a>：主殿有主佛帕邢佛像，巨大且金碧輝煌，看起來非常莊嚴與壯觀，金色的大佛塔也是一大亮點，陽光下更顯得格外耀眼。</li>
+              <li><a href="https://journey.tw/wat-chiang-man/" target="_blank" rel="noopener">清曼寺</a>：最著名的是由 15 頭石雕大象托起的「大象佛塔」，以及兩尊珍貴的佛像「水晶佛」與「小金佛」。</li>
+              <li><a href="https://ajtravel.tw/20230917/" target="_blank" rel="noopener">湄卡運河市集 Khlong Mae Kha</a>：又叫水溝市場，被譽為「清邁版小樽運河」，日泰混搭風文青景點。每日下午 3 點開始營業，建議 17:30 或 18:00 後再來，店開比較多。</li>
+            </ul>
+          </div>
+          <div class="card area-card">
+            <h3>周邊郊區 Suburbs</h3>
+            <p>適合遠離塵囂，享受山林 Villa、體驗大象營或叢林飛索。</p>
+            <p class="area-highlights-label">代表景點</p>
+            <ul class="area-highlights">
+              <li><a href="https://journey.tw/wat-phra-that-doi-suthep/" target="_blank" rel="noopener">雙龍寺/素帖寺（Wat Phra That Doi Suthep）</a>：觀光客較多，俯瞰清邁絕美全景的無敵殿堂。外國遊客的純門票是 30 泰銖，如果包含單程電梯纜車，費用則是 50 泰銖。</li>
+              <li><a href="https://journey.tw/wat-umong/" target="_blank" rel="noopener">悟孟寺（Wat Umong）</a>：擁有超過 700 年歷史的古老「森林寺廟」，有地底佛堂、會說話的樹，洗滌心靈的好所在。門票價格為每人 20 泰銖。</li>
+              <li><a href="https://pengu777.com/wat-phra-that-doi-kham/" target="_blank" rel="noopener">來康寺（Wat Phra That Doi Kham）</a>：清邁信眾公認最靈驗！最有名的就是龍婆壇猜佛，之前同事來許願，過了半年壞主管就被辭退，非常推薦但許願要用正向方式許喔！</li>
+              <li><a href="https://pengu777.com/elefin-farm-cafe/" target="_blank" rel="noopener">Elefin Farm &amp; Cafe 大象咖啡廳</a>：可以一邊喝咖啡，一邊與大象近距離互動。</li>
+              <li><a href="https://tw.trip.com/moments/theme/poi-cypress-lanes-136777761-attraction-993137/" target="_blank" rel="noopener">Cypress Lanes</a>：清邁歐洲風秘境角落咖啡廳，以「松樹步道」著稱。</li>
+              <li><a href="https://www.wendyjourney.com/jing-jai-market/" target="_blank" rel="noopener">真心市集 Jing Jai Market</a>：當地創意手工藝品、手工服飾、小農自產農產品集散地。最熱鬧、攤位最齊全的時段是每週六、日早上，平日雖然也有一些店面會開，但氣氛和規模就完全不同了。</li>
+            </ul>
+          </div>
+
+          <div class="card area-card">
+            <h3>湄登區 Mae Taeng</h3>
+            <p>清邁市區西北方約 60 分鐘車程，通常安排包車一日遊。</p>
+            <p class="area-highlights-label">代表景點</p>
+            <ul class="area-highlights">
+              <li><a href="https://footprintbackup.com/chiang-mai-wat-ban-den/" target="_blank" rel="noopener">清邁藍廟（Wat Ban Den）</a>：擁有 130 年歷史的當地信仰中心，由多座蘭納風格的藍頂佛殿與精緻神獸雕刻組成。和清萊藍廟不一樣喔。</li>
+              <li><a href="https://www.threads.com/share/P7nzM6OMQ/" target="_blank" rel="noopener">黏黏瀑布（Bua Tong Sticky Waterfall）</a>：可以手腳並用、踩著獨特岩面安全攀爬登頂的著名玩水瀑布。</li>
+              <li><a href="https://chiangmaijourney.com/chiang-mai-attractions-dantewada-land-of-angels-waterfall-park/" target="_blank" rel="noopener">天使瀑布（Dantewada Land of Angels）</a>：宛如人間仙境的森林瀑布公園，園區內設有景觀咖啡廳，充滿迷霧、花海、水景與好拍的造景。</li>
+              <li><strong>湄登大象園／大象營</strong>：可以近距離觀察、友善接觸大象或是體驗竹筏漂流與叢林生態的知名去處。</li>
+              <li><strong>湄登河激流泛舟</strong>：提供刺激的 10 公里河道激流與山林瀑布嬉水體驗。</li>
+            </ul>
+            <a class="prep-link" href="https://followtotravel.com/maetaeng-maerim-one-day-trip/" target="_blank" rel="noopener">查看湄登一日遊行程參考 →</a>
+          </div>
+
+          <div class="card area-card">
+            <h3>其他一日遊旅行團景點</h3>
+            <p class="area-highlights-label">推薦行程</p>
+            <ul class="area-highlights">
+              <li><a href="https://www.facebook.com/groups/1571560113096227/posts/3551360788449473/" target="_blank" rel="noopener">茵他儂山國家公園一日團</a>：有「泰國屋脊」之稱，車程約 2 至 2.5 小時，帶你登上海拔 2,565 公尺的泰國最高峰。</li>
+              <li><a href="https://www.klook.com/zh-TW/activity/80270-chiangrai-white-blue-black-temple-series-fullday-tour-from-chiangmai/" target="_blank" rel="noopener">清萊白廟黑廟藍廟一日遊</a>：參觀著名的三色寺廟系列。</li>
+              <li><a href="https://www.klook.com/zh-TW/activity/3475-jungle-flight-zipline-adventure-chiang-mai/" target="_blank" rel="noopener">清邁叢林高空滑索體驗</a>：在清邁叢林中飛躍，多達 34 個平臺可供攀爬，22 條高空滑索等你體驗！</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 必逛市集攻略 -->
+    <section id="markets" class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>🛍️ 清邁市集指南：從早到晚買不停</h2>
+        </div>
+
+        <div class="market-day-grid fade-in">
+          <div class="market-day-card">
+            <span class="market-day-badge badge--weekday">平日</span>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">早晨市集 Friday Morning Market</span>
+                <span class="market-day-time">週五 05:00–12:00</span>
+              </div>
+              <p class="market-day-desc">在地早市限定，早點去最能體驗在地人的生活感。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">白色市集 White Market</span>
+                <span class="market-day-time">週四–週日 15:00–22:00</span>
+              </div>
+              <p class="market-day-desc">尼曼區文青市集，手作、小吃都好逛（部分時段可能延長至週一）。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">NGFM 夜市市集</span>
+                <span class="market-day-time">週二、週三 16:00–23:00</span>
+              </div>
+              <p class="market-day-desc">尼曼區夜間市集，適合搭配 One Nimman 一起逛。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">尼曼 6 號巷步行街</span>
+                <span class="market-day-time">週五 17:00–22:00</span>
+              </div>
+              <p class="market-day-desc">週五限定散步街，晚上吃吃逛逛剛剛好。</p>
+            </div>
+          </div>
+
+          <div class="market-day-card">
+            <span class="market-day-badge badge--sat">週六</span>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">椰林市集 Coconut Market<span class="must-visit-badge">必去</span></span>
+                <span class="market-day-time">08:00–15:00</span>
+              </div>
+              <p class="market-day-desc">超人氣椰子林市集，拍照打卡超有度假感。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">雨樹手工市集 Cham Cha Market</span>
+                <span class="market-day-time">09:00–15:00</span>
+              </div>
+              <p class="market-day-desc">綠蔭下的小而美手作市集，質感很高，適合慢慢挖寶。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">藝術村 Baan Kang Wat<span class="must-visit-badge">必去</span></span>
+                <span class="market-day-time">10:00–18:00</span>
+              </div>
+              <p class="market-day-desc">咖啡廳、選物店、手作小店聚集，很有清邁特有的慢活氛圍。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">白色市集 White Market</span>
+                <span class="market-day-time">15:00–22:00</span>
+              </div>
+              <p class="market-day-desc">尼曼區文青市集，手作、小吃都好逛。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">Wua Lai 週六夜市</span>
+                <span class="market-day-time">17:00–22:30</span>
+              </div>
+              <p class="market-day-desc">週六經典夜市，傳統泰北小吃、手工藝與在地銀飾通通有。</p>
+            </div>
+          </div>
+
+          <div class="market-day-card">
+            <span class="market-day-badge badge--sun">週日</span>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">椰林市集 Coconut Market<span class="must-visit-badge">必去</span></span>
+                <span class="market-day-time">08:00–15:00</span>
+              </div>
+              <p class="market-day-desc">超人氣椰子林市集，拍照打卡超有度假感。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">雨樹手工市集 Cham Cha Market</span>
+                <span class="market-day-time">09:00–15:00</span>
+              </div>
+              <p class="market-day-desc">綠蔭下的小而美手作市集，質感很高，適合慢慢挖寶。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">藝術村 Baan Kang Wat<span class="must-visit-badge">必去</span></span>
+                <span class="market-day-time">10:00–18:00</span>
+              </div>
+              <p class="market-day-desc">咖啡廳、選物店、手作小店聚集，很有清邁特有的慢活氛圍。週末攤位與人潮較多，想感受熱鬧氣氛可安排週末前往。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">白色市集 White Market</span>
+                <span class="market-day-time">15:00–22:00</span>
+              </div>
+              <p class="market-day-desc">尼曼區文青市集，手作、小吃都好逛。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">塔佩門夜市 Tha Phae Walking Street</span>
+                <span class="market-day-time">17:00–22:00</span>
+              </div>
+              <p class="market-day-desc">清邁最大週日步行夜市，第一次來清邁絕對必逛。</p>
+            </div>
+          </div>
+
+          <div class="market-day-card">
+            <span class="market-day-badge badge--daily">每日</span>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">水溝市場 Khlong Mae Kha</span>
+                <span class="market-day-time">15:00–22:00</span>
+              </div>
+              <p class="market-day-desc">河道旁散步型市集，傍晚亮燈後更有日式混搭泰式的氣氛。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">清邁夜市 Chiang Mai Night Bazaar</span>
+                <span class="market-day-time">17:00–00:00</span>
+              </div>
+              <p class="market-day-desc">經典觀光夜市，買伴手禮、吃海鮮海排檔很方便。</p>
+            </div>
+            <div class="market-day-item">
+              <div class="market-day-item-head">
+                <span class="market-day-name">清邁大學夜市 Malin Plaza</span>
+                <span class="market-day-time">17:00–23:00</span>
+              </div>
+              <p class="market-day-desc">學生最愛！平價服飾、在地泰式小吃選擇超多。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card fade-in">
+          <p class="market-subtitle">真心文創市集 Jing Jai Market｜週末早上 <span class="must-visit-badge">必去</span></p>
+
+          <div class="market-item">
+            <h3>早上市集</h3>
+            <p class="market-schedule">週末 06:30–15:00</p>
+            <p>手工藝文創與小吃攤位為主，13:00–14:00 後會陸續收攤，建議早點出發。</p>
+          </div>
+          <div class="market-item">
+            <h3>Good Goods Zone</h3>
+            <p class="market-schedule">平日 08:30–22:00、週末 06:30–22:00</p>
+            <p>常設選物店與質感商店，平日去也能逛。</p>
+          </div>
+          <div class="market-item">
+            <h3>Vintage 市集</h3>
+            <p class="market-schedule">每月第一個週五 16:00–22:00</p>
+            <p>喜歡復古選物、二手小物的人可以留意時間。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 需求調查表單 -->
+    <section id="survey-form" class="section form-section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>📝 說出你的願望清單！</h2>
+          <p>為了安排大家滿意的行程，請花點填寫，謝謝！</p>
+        </div>
+
+        <form class="trip-form fade-in" id="tripForm" novalidate>
+          <div class="form-fields">
+
+            <div class="form-field">
+              <label class="form-label" for="travelerName">1. 姓名</label>
+              <input class="text-input" type="text" id="travelerName" name="travelerName" required placeholder="輸入你的名字">
+            </div>
+
+            <fieldset class="form-field" data-group="flightPref">
+              <legend class="form-label">2. 航班時間偏好</legend>
+              <div class="choice-group">
+                <input class="choice-input" type="radio" name="flightPref" id="flightMorning" value="早去午回派" required>
+                <label class="choice-label" for="flightMorning">早去午回派</label>
+
+                <input class="choice-input" type="radio" name="flightPref" id="flightNoon" value="午去晚回派">
+                <label class="choice-label" for="flightNoon">午去晚回派</label>
+
+                <input class="choice-input" type="radio" name="flightPref" id="flightRedEye" value="晚去紅眼回派">
+                <label class="choice-label" for="flightRedEye">晚去紅眼回派</label>
+
+                <input class="choice-input" type="radio" name="flightPref" id="flightAny" value="都可以，配合大家">
+                <label class="choice-label" for="flightAny">都可以，配合大家</label>
+              </div>
+              <span class="field-error">請選擇一項航班時間偏好</span>
+            </fieldset>
+
+            <fieldset class="form-field" data-group="accommodationType" data-min="1">
+              <legend class="form-label">3. 住宿類型偏好 <span class="field-hint">可複選</span></legend>
+              <div class="choice-group">
+                <input class="choice-input" type="checkbox" name="accommodationType" id="typeHotel" value="飯店">
+                <label class="choice-label" for="typeHotel">飯店</label>
+
+                <input class="choice-input" type="checkbox" name="accommodationType" id="typeGuesthouse" value="民宿">
+                <label class="choice-label" for="typeGuesthouse">民宿</label>
+
+                <input class="choice-input" type="checkbox" name="accommodationType" id="typeVilla" value="Villa">
+                <label class="choice-label" for="typeVilla">Villa</label>
+
+                <input class="choice-input" type="checkbox" name="accommodationType" id="typeAny" value="都可以，配合大家">
+                <label class="choice-label" for="typeAny">都可以，配合大家</label>
+              </div>
+              <span class="field-error">請至少選擇一項住宿類型偏好</span>
+            </fieldset>
+
+            <div class="form-field">
+              <label class="form-label" for="budgetPerNight">4. 期待每晚住宿預算（台幣）</label>
+              <input class="text-input" type="text" id="budgetPerNight" name="budgetPerNight" placeholder="輸入你期待的每晚住宿預算">
+            </div>
+
+            <fieldset class="form-field" data-group="transportPref" data-min="1">
+              <legend class="form-label">5. 交通 <span class="field-hint">可複選</span></legend>
+              <div class="choice-group">
+                <input class="choice-input" type="checkbox" name="transportPref" id="transportCharter" value="人多就包車">
+                <label class="choice-label" for="transportCharter">人多就包車</label>
+
+                <input class="choice-input" type="checkbox" name="transportPref" id="transportGrab" value="Grab叫車">
+                <label class="choice-label" for="transportGrab">Grab叫車</label>
+
+                <input class="choice-input" type="checkbox" name="transportPref" id="transportTuktuk" value="想體驗嘟嘟車">
+                <label class="choice-label" for="transportTuktuk">想體驗嘟嘟車</label>
+
+                <input class="choice-input" type="checkbox" name="transportPref" id="transportTour" value="KKday/Klook 一日遊">
+                <label class="choice-label" for="transportTour">KKday/Klook 一日遊</label>
+
+                <input class="choice-input" type="checkbox" name="transportPref" id="transportAny" value="都可以，配合大家">
+                <label class="choice-label" for="transportAny">都可以，配合大家</label>
+              </div>
+              <span class="field-error">請至少選擇一項交通偏好</span>
+            </fieldset>
+
+            <fieldset class="form-field" data-group="pacePref">
+              <legend class="form-label">6. 每天行程節奏</legend>
+              <div class="choice-group">
+                <input class="choice-input" type="radio" name="pacePref" id="paceRelax" value="放鬆度假（每天2~3個景點）" required>
+                <label class="choice-label" for="paceRelax">放鬆度假（每天2~3個景點）</label>
+
+                <input class="choice-input" type="radio" name="pacePref" id="paceExplore" value="精實探索（早起多跑景點、多吃美食）">
+                <label class="choice-label" for="paceExplore">精實探索（早起多跑景點、多吃美食）</label>
+
+                <input class="choice-input" type="radio" name="pacePref" id="paceBalance" value="彈性平衡（半天景點半天咖啡廳或市集放鬆）">
+                <label class="choice-label" for="paceBalance">彈性平衡（半天景點半天咖啡廳或市集放鬆）</label>
+              </div>
+              <span class="field-error">請選擇一項行程節奏偏好</span>
+            </fieldset>
+
+            <fieldset class="form-field" data-group="earliestStartPref">
+              <legend class="form-label">7. 每天最早可以接受幾點開始走行程</legend>
+              <div class="choice-group">
+                <input class="choice-input" type="radio" name="earliestStartPref" id="startEight" value="早上8點" required>
+                <label class="choice-label" for="startEight">早上8點</label>
+
+                <input class="choice-input" type="radio" name="earliestStartPref" id="startNine" value="早上9點">
+                <label class="choice-label" for="startNine">早上9點</label>
+
+                <input class="choice-input" type="radio" name="earliestStartPref" id="startTen" value="早上10點">
+                <label class="choice-label" for="startTen">早上10點</label>
+
+                <input class="choice-input" type="radio" name="earliestStartPref" id="startEleven" value="早上11點">
+                <label class="choice-label" for="startEleven">早上11點</label>
+
+                <input class="choice-input" type="radio" name="earliestStartPref" id="startAny" value="都可以，配合大家">
+                <label class="choice-label" for="startAny">都可以，配合大家</label>
+              </div>
+              <span class="field-error">請選擇一項最早出發時間偏好</span>
+            </fieldset>
+
+            <div class="form-field">
+              <label class="form-label" for="notes">8. 飲食禁忌或其他需求</label>
+              <textarea class="textarea-input" id="notes" name="notes" placeholder="例如：不吃牛、對海鮮過敏、一定要去大象保護區⋯⋯"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">提交願望！</button>
+          </div>
+
+          <div class="form-success" id="formSuccess">
+            <span class="icon">🎉</span>
+            <h3>願望已收到！</h3>
+            <p>謝謝填寫，以下是你的選擇，已經飛鴿傳書給里長了：</p>
+            <ul class="summary-list" id="summaryList"></ul>
+            <button type="button" class="reset-btn" id="resetFormBtn">填寫下一位</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>2027 清邁旅遊．行前資訊與願望清單調查</p>
+  </footer>
+
+  <script>
+    // 部署 Apps Script 網頁應用程式後，將網址貼在這裡即可開始收集回覆到 Google Sheets
+    const GOOGLE_SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycby412Mh_XjWF9UnjdtBBNSBMR0MNphplV39uYz2f0K7qRlVw26K708JQwlyDNLt_IiVhQ/exec';
+
+    // 將表單資料送到 Google Sheets（fire-and-forget，失敗不影響前端摘要顯示）
+    function submitToGoogleSheets(formData) {
+      if (!GOOGLE_SHEETS_ENDPOINT) return;
+
+      const payload = new URLSearchParams();
+      payload.append('timestamp', new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' }));
+      payload.append('travelerName', formData.get('travelerName') || '');
+      payload.append('flightPref', formData.get('flightPref') || '');
+      payload.append('accommodationType', formData.getAll('accommodationType').join('、'));
+      payload.append('budgetPerNight', (formData.get('budgetPerNight') || '').trim());
+      payload.append('transportPref', formData.getAll('transportPref').join('、'));
+      payload.append('pacePref', formData.get('pacePref') || '');
+      payload.append('earliestStartPref', formData.get('earliestStartPref') || '');
+      payload.append('notes', (formData.get('notes') || '').trim());
+
+      fetch(GOOGLE_SHEETS_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: payload,
+      }).catch(() => {});
+    }
+
+    // 區塊滾動淡入效果
+    function initFadeInObserver() {
+      const fadeEls = document.querySelectorAll('.fade-in');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        fadeEls.forEach((el) => el.classList.add('is-visible'));
+        return;
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      fadeEls.forEach((el) => observer.observe(el));
+    }
+
+    // 檢查多選題群組是否至少選了一項
+    function isCheckboxGroupValid(fieldset) {
+      const minRequired = Number(fieldset.dataset.min || 0);
+      if (minRequired === 0) return true;
+      const checked = fieldset.querySelectorAll('input[type="checkbox"]:checked');
+      return checked.length >= minRequired;
+    }
+
+    // 依表單欄位組成願望清單摘要
+    function buildSummaryItems(formData) {
+      const items = [
+        { label: '姓名', value: formData.get('travelerName') },
+        { label: '航班時間偏好', value: formData.get('flightPref') },
+        { label: '住宿類型偏好', value: formData.getAll('accommodationType').join('、') },
+        { label: '期待每晚住宿預算', value: (formData.get('budgetPerNight') || '').trim() || '（未填寫）' },
+        { label: '交通偏好', value: formData.getAll('transportPref').join('、') },
+        { label: '每天行程節奏', value: formData.get('pacePref') },
+        { label: '每天最早可接受的開始時間', value: formData.get('earliestStartPref') },
+      ];
+
+      const notes = (formData.get('notes') || '').trim();
+      items.push({ label: '飲食禁忌或其他需求', value: notes || '（未填寫）' });
+
+      return items;
+    }
+
+    function renderSummary(items) {
+      const summaryList = document.getElementById('summaryList');
+      summaryList.innerHTML = '';
+
+      items.forEach((item) => {
+        const li = document.createElement('li');
+        const strong = document.createElement('strong');
+        strong.textContent = item.label;
+        const textNode = document.createTextNode(item.value || '（未填寫）');
+        li.appendChild(strong);
+        li.appendChild(textNode);
+        summaryList.appendChild(li);
+      });
+    }
+
+    function initTripForm() {
+      const form = document.getElementById('tripForm');
+      const successPanel = document.getElementById('formSuccess');
+      const resetBtn = document.getElementById('resetFormBtn');
+      const checkboxFieldsets = form.querySelectorAll('fieldset[data-min]');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        // 先清除上一次的錯誤狀態
+        form.querySelectorAll('.form-field.has-error').forEach((field) => {
+          field.classList.remove('has-error');
+        });
+
+        // 瀏覽器原生驗證：必填文字與單選題
+        if (!form.reportValidity()) {
+          return;
+        }
+
+        // 自訂驗證：多選題至少選一項
+        let firstInvalidGroup = null;
+        checkboxFieldsets.forEach((fieldset) => {
+          if (!isCheckboxGroupValid(fieldset)) {
+            fieldset.classList.add('has-error');
+            if (!firstInvalidGroup) firstInvalidGroup = fieldset;
+          }
+        });
+
+        if (firstInvalidGroup) {
+          firstInvalidGroup.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
+        // 驗證通過，送出到 Google Sheets 並顯示願望清單摘要
+        const formData = new FormData(form);
+        submitToGoogleSheets(formData);
+        const summaryItems = buildSummaryItems(formData);
+        renderSummary(summaryItems);
+
+        form.classList.add('is-submitted');
+        successPanel.classList.add('is-visible');
+        successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+
+      resetBtn.addEventListener('click', () => {
+        form.reset();
+        form.classList.remove('is-submitted');
+        successPanel.classList.remove('is-visible');
+        form.querySelectorAll('.form-field.has-error').forEach((field) => {
+          field.classList.remove('has-error');
+        });
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    // 進站背景音樂：嘗試自動播放，若被瀏覽器政策擋下，改為第一次互動時播放
+    function initBackgroundMusic() {
+      const music = document.getElementById('bgMusic');
+      const toggle = document.getElementById('musicToggle');
+      const label = toggle.querySelector('.music-label');
+
+      function setPlayingState(isPlaying) {
+        toggle.classList.toggle('is-playing', isPlaying);
+        toggle.setAttribute('aria-pressed', String(isPlaying));
+        label.textContent = isPlaying ? '暫停音樂' : '播放音樂';
+      }
+
+      function tryPlay() {
+        music.play().then(() => setPlayingState(true)).catch(() => setPlayingState(false));
+      }
+
+      function playOnFirstInteraction(event) {
+        ['pointerdown', 'keydown', 'touchstart'].forEach((ev) => {
+          document.removeEventListener(ev, playOnFirstInteraction);
+        });
+        // 點擊音樂按鈕本身已由按鈕自己的 click 事件處理播放/暫停，這裡不重複觸發
+        if (event.target.closest && event.target.closest('#musicToggle')) return;
+        tryPlay();
+      }
+
+      // scroll 事件不被瀏覽器視為有效的使用者手勢，無法用來解除自動播放限制，故不監聽
+      ['pointerdown', 'keydown', 'touchstart'].forEach((ev) => {
+        document.addEventListener(ev, playOnFirstInteraction, { once: true, passive: true });
+      });
+
+      toggle.addEventListener('click', () => {
+        if (music.paused) {
+          tryPlay();
+        } else {
+          music.pause();
+          setPlayingState(false);
+        }
+      });
+
+      tryPlay();
+    }
+
+    initFadeInObserver();
+    initTripForm();
+    initBackgroundMusic();
+  </script>
+
+</body>
+</html>
