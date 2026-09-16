@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2027 清邁旅遊｜6天5夜自由行 | 行前資訊與願望清單調查</title>
 <meta name="description" content="2027 年 1 月清邁旅遊行前資訊：航班天氣、住宿分區、市集攻略，並填寫行程願望清單表單。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%98%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="2027 清邁旅遊">
+<meta property="og:title" content="2027 清邁旅遊｜6天5夜自由行 | 行前資訊與願望清單調查">
+<meta property="og:description" content="2027 年 1 月清邁旅遊行前資訊：航班天氣、住宿分區、市集攻略，並填寫行程願望清單表單。">
+<meta property="og:url" content="https://chiangmai-travel-2027.vercel.app/">
+<meta property="og:image" content="https://chiangmai-travel-2027.vercel.app/assets/cover.jpg">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="2027 清邁旅遊｜6天5夜自由行 | 行前資訊與願望清單調查">
+<meta name="twitter:description" content="2027 年 1 月清邁旅遊行前資訊：航班天氣、住宿分區、市集攻略，並填寫行程願望清單表單。">
+<meta name="twitter:image" content="https://chiangmai-travel-2027.vercel.app/assets/cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -21,6 +33,8 @@
     --color-wood: #8B5E3C;
     --color-night: #5C4A73;
     --color-info: #3E7C8A;
+    --color-navy: #2E4A6B;
+    --color-navy-dark: #22364F;
     --color-text: #3B2A1D;
     --color-text-muted: #6E5A47;
     --color-border: #E2CFAE;
@@ -101,16 +115,6 @@
     max-width: 560px;
     color: rgba(255, 251, 243, 0.92);
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-gif {
-    margin-top: 16px;
-    width: 140px;
-    border-radius: var(--radius-md);
-    border: 2px solid rgba(255, 251, 243, 0.5);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
     position: relative;
     z-index: 1;
   }
@@ -379,6 +383,15 @@
     font-size: 0.88rem;
   }
 
+  .area-card--navy {
+    border-left-color: var(--color-navy);
+  }
+
+  .area-card--navy h3,
+  .area-card--navy .area-highlights-label {
+    color: var(--color-navy-dark);
+  }
+
   .area-highlights {
     margin-top: 8px;
     padding-left: 18px;
@@ -404,6 +417,93 @@
 
   .area-highlights a:hover {
     text-decoration: underline;
+  }
+
+  /* ---------- 住宿與價格參考 ---------- */
+  .stay-area-title {
+    font-weight: 700;
+    color: var(--color-secondary-dark);
+    margin: 0 0 20px;
+    font-size: 1.1rem;
+  }
+
+  .stay-area-title + .stay-area-title,
+  .stay-grid + .stay-area-title {
+    margin-top: 40px;
+  }
+
+  .stay-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 480px) {
+    .stay-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 900px) {
+    .stay-grid { grid-template-columns: repeat(5, 1fr); }
+  }
+
+  .stay-card {
+    display: block;
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .stay-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(59, 42, 29, 0.16);
+  }
+
+  .stay-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+
+  .stay-card-body {
+    padding: 14px;
+  }
+
+  .stay-card-body h4 {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    margin-bottom: 6px;
+  }
+
+  .stay-specs {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .stay-price {
+    margin-top: 8px;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    font-size: 1rem;
+  }
+
+  .stay-price span {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin-left: 2px;
+  }
+
+  .stay-note {
+    margin-top: 20px;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
   }
 
   /* ---------- 市集依日期分區 ---------- */
@@ -632,6 +732,21 @@
     gap: 10px;
   }
 
+  .spots-group-label {
+    font-weight: 700;
+    color: var(--color-secondary-dark);
+    font-size: 0.88rem;
+    margin: 18px 0 10px;
+  }
+
+  .spots-group-label:first-of-type {
+    margin-top: 0;
+  }
+
+  .choice-group + .spots-group-label {
+    margin-top: 18px;
+  }
+
   .choice-input {
     position: absolute;
     opacity: 0;
@@ -841,7 +956,6 @@
     <span class="hero-eyebrow">都是P人居多的快樂旅遊團</span>
     <h1>2027 清邁旅遊｜6天5夜自由行</h1>
     <p>在出發前，請先看看里長整理的清邁簡介，說出你的願望吧！<br>소원을 말해봐</p>
-    <img class="hero-gif" src="assets/genie-dance.webp" alt="少女時代《소원을 말해봐》跳舞動圖" loading="lazy" width="280" height="163">
     <a href="#prep" class="hero-scroll">
       <span>先了解一下清邁</span>
       <span class="arrow">↓</span>
@@ -1004,7 +1118,7 @@
     <section id="accommodation" class="section section--alt">
       <div class="container">
         <div class="section-header fade-in">
-          <h2>🗺️ 清邁四大區域解析</h2>
+          <h2>🗺️ 清邁區域解析</h2>
         </div>
 
         <figure class="map-figure fade-in">
@@ -1069,7 +1183,7 @@
             </ul>
           </div>
 
-          <div class="card area-card">
+          <div class="card area-card area-card--navy">
             <h3>湄登區 Mae Taeng</h3>
             <p>清邁市區西北方約 60 分鐘車程，通常安排包車一日遊。</p>
             <p class="area-highlights-label">代表景點</p>
@@ -1083,7 +1197,7 @@
             <a class="prep-link" href="https://followtotravel.com/maetaeng-maerim-one-day-trip/" target="_blank" rel="noopener">查看湄登一日遊行程參考 →</a>
           </div>
 
-          <div class="card area-card">
+          <div class="card area-card area-card--navy">
             <h3>其他一日遊旅行團景點</h3>
             <p class="area-highlights-label">推薦行程</p>
             <ul class="area-highlights">
@@ -1093,6 +1207,61 @@
             </ul>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 住宿與價格參考 -->
+    <section id="stay" class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2>🏡 清邁住宿與價格參考</h2>
+          <p>依區域整理住宿選項，價格為 9 人分攤下的人均每晚金額，實際費用以訂房頁面即時報價為準。</p>
+        </div>
+
+        <h3 class="stay-area-title fade-in">尼曼區 Nimman</h3>
+        <div class="stay-grid fade-in">
+          <a class="stay-card" href="https://www.airbnb.com.tw/rooms/1543918720997635746?check_in=2027-01-14&check_out=2027-01-19&guests=1&adults=9&s=67&unique_share_id=a0e9dca0-8e51-4704-b3ec-80cd0992232b" target="_blank" rel="noopener">
+            <img src="assets/ban-ton-son.jpg" alt="BanTonSon 住宿外觀" loading="lazy" width="640" height="427">
+            <div class="stay-card-body">
+              <h4>BanTonSon</h4>
+              <p class="stay-specs">10 人・5 房・6 床・6.5 衛浴</p>
+              <p class="stay-price">NT$2,000<span>／人・晚</span></p>
+            </div>
+          </a>
+          <a class="stay-card" href="https://www.airbnb.com.tw/rooms/1653713243042931502?check_in=2027-01-14&check_out=2027-01-19&guests=1&adults=9&s=67&unique_share_id=c8d51351-9c4d-41af-bef7-6e16981cd631" target="_blank" rel="noopener">
+            <img src="assets/wabi-house.jpg" alt="WabiHouse 住宿外觀" loading="lazy" width="640" height="427">
+            <div class="stay-card-body">
+              <h4>WabiHouse</h4>
+              <p class="stay-specs">12 人・5 房・5 床・4.5 衛浴</p>
+              <p class="stay-price">NT$1,800<span>／人・晚</span></p>
+            </div>
+          </a>
+          <a class="stay-card" href="https://www.airbnb.com.tw/rooms/19861171?check_in=2027-01-14&check_out=2027-01-19&guests=1&adults=9&s=67&unique_share_id=dbb8ed1e-758c-4ff1-98f7-8e9e77863f51" target="_blank" rel="noopener">
+            <img src="assets/nimman-private-pool-villa.jpg" alt="Nimman 私人泳池別墅住宿外觀" loading="lazy" width="640" height="427">
+            <div class="stay-card-body">
+              <h4>Nimman 私人泳池別墅</h4>
+              <p class="stay-specs">13 人・4 房・10 床・4 衛浴</p>
+              <p class="stay-price">NT$1,700<span>／人・晚</span></p>
+            </div>
+          </a>
+          <a class="stay-card" href="https://www.airbnb.com.tw/rooms/948912008801957429?check_in=2027-01-14&check_out=2027-01-19&guests=1&adults=9&s=67&unique_share_id=e68ca27d-05b5-4b57-b05f-315e4e6d0ccc" target="_blank" rel="noopener">
+            <img src="assets/modern-thai-pool-villa.jpg" alt="Modern Thai Style Private Pool Villa 住宿外觀" loading="lazy" width="640" height="427">
+            <div class="stay-card-body">
+              <h4>Modern Thai Style Private Pool Villa</h4>
+              <p class="stay-specs">9 人・4 房・5 床・6 衛浴</p>
+              <p class="stay-price">NT$1,000<span>／人・晚</span></p>
+            </div>
+          </a>
+          <a class="stay-card" href="https://www.airbnb.com.tw/rooms/48682899?check_in=2027-01-14&check_out=2027-01-19&guests=1&adults=9&s=67&unique_share_id=4e4edc80-ae33-48d3-86cd-34ba055a3341" target="_blank" rel="noopener">
+            <img src="assets/lapin-no-8.jpg" alt="Lapin No.8 住宿外觀" loading="lazy" width="640" height="427">
+            <div class="stay-card-body">
+              <h4>Lapin No.8</h4>
+              <p class="stay-specs">10 人・4 房・4 床・3.5 衛浴</p>
+              <p class="stay-price">NT$640<span>／人・晚</span></p>
+            </div>
+          </a>
+        </div>
+        <p class="stay-note">點擊圖片或名稱即可前往 Airbnb 房源頁面查看詳細資訊與即時房價。</p>
       </div>
     </section>
 
@@ -1267,7 +1436,7 @@
       <div class="container">
         <div class="section-header fade-in">
           <h2>📝 說出你的願望清單！</h2>
-          <p>為了安排大家滿意的行程，請花點填寫，謝謝！</p>
+          <p>為了盡力安排大家滿意的行程，請花點時間填寫，謝謝！</p>
         </div>
 
         <form class="trip-form fade-in" id="tripForm" novalidate>
@@ -1279,7 +1448,7 @@
             </div>
 
             <fieldset class="form-field" data-group="flightPref">
-              <legend class="form-label">2. 航班時間偏好</legend>
+              <legend class="form-label">2. 航班時間偏好 <span class="field-hint">機票預計來回 1.2~1.5 萬</span></legend>
               <div class="choice-group">
                 <input class="choice-input" type="radio" name="flightPref" id="flightMorning" value="早去午回派" required>
                 <label class="choice-label" for="flightMorning">早去午回派</label>
@@ -1340,19 +1509,112 @@
               <span class="field-error">請至少選擇一項交通偏好</span>
             </fieldset>
 
-            <fieldset class="form-field" data-group="pacePref">
-              <legend class="form-label">6. 每天行程節奏</legend>
+            <fieldset class="form-field" data-group="desiredSpots" data-min="1">
+              <legend class="form-label">6. 想去的行程景點 <span class="field-hint">可複選</span></legend>
+
+              <p class="spots-group-label">尼曼區 Nimman</p>
               <div class="choice-group">
-                <input class="choice-input" type="radio" name="pacePref" id="paceRelax" value="放鬆度假（每天2~3個景點）" required>
-                <label class="choice-label" for="paceRelax">放鬆度假（每天2~3個景點）</label>
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotOneNimman" value="尼曼一號 One Nimman">
+                <label class="choice-label" for="spotOneNimman">尼曼一號 One Nimman</label>
 
-                <input class="choice-input" type="radio" name="pacePref" id="paceExplore" value="精實探索（早起多跑景點、多吃美食）">
-                <label class="choice-label" for="paceExplore">精實探索（早起多跑景點、多吃美食）</label>
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotNimmanRoad" value="寧曼路商圈">
+                <label class="choice-label" for="spotNimmanRoad">寧曼路商圈</label>
 
-                <input class="choice-input" type="radio" name="pacePref" id="paceBalance" value="彈性平衡（半天景點半天咖啡廳或市集放鬆）">
-                <label class="choice-label" for="paceBalance">彈性平衡（半天景點半天咖啡廳或市集放鬆）</label>
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotMaya" value="Maya 百貨">
+                <label class="choice-label" for="spotMaya">Maya 百貨</label>
               </div>
-              <span class="field-error">請選擇一項行程節奏偏好</span>
+
+              <p class="spots-group-label">夜市區 Night Bazaar</p>
+              <div class="choice-group">
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotChangklan" value="長康路夜市">
+                <label class="choice-label" for="spotChangklan">長康路夜市</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotWarorot" value="瓦洛洛市場">
+                <label class="choice-label" for="spotWarorot">瓦洛洛市場</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotChangmoi" value="藤編一條街">
+                <label class="choice-label" for="spotChangmoi">藤編一條街</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotJingJaiNight" value="清邁真心市集 Jing Jai Market">
+                <label class="choice-label" for="spotJingJaiNight">清邁真心市集 Jing Jai Market</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotCoconut" value="椰林市集 Coconut Market">
+                <label class="choice-label" for="spotCoconut">椰林市集 Coconut Market</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotChamcha" value="雨樹市集 Chamcha Market">
+                <label class="choice-label" for="spotChamcha">雨樹市集 Chamcha Market</label>
+              </div>
+
+              <p class="spots-group-label">古城區與塔佩門 Old City &amp; Thapae</p>
+              <div class="choice-group">
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotThapae" value="塔佩門">
+                <label class="choice-label" for="spotThapae">塔佩門</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotChediLuang" value="柴迪隆寺">
+                <label class="choice-label" for="spotChediLuang">柴迪隆寺</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotPhraSingh" value="帕邢寺">
+                <label class="choice-label" for="spotPhraSingh">帕邢寺</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotChiangMan" value="清曼寺">
+                <label class="choice-label" for="spotChiangMan">清曼寺</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotKhlongMaeKha" value="湄卡運河市集 Khlong Mae Kha">
+                <label class="choice-label" for="spotKhlongMaeKha">湄卡運河市集 Khlong Mae Kha</label>
+              </div>
+
+              <p class="spots-group-label">周邊郊區 Suburbs</p>
+              <div class="choice-group">
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotDoiSuthep" value="雙龍寺/素帖寺">
+                <label class="choice-label" for="spotDoiSuthep">雙龍寺/素帖寺</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotWatUmong" value="悟孟寺">
+                <label class="choice-label" for="spotWatUmong">悟孟寺</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotDoiKham" value="來康寺">
+                <label class="choice-label" for="spotDoiKham">來康寺</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotElefin" value="Elefin Farm & Cafe 大象咖啡廳">
+                <label class="choice-label" for="spotElefin">Elefin Farm &amp; Cafe 大象咖啡廳</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotCypress" value="Cypress Lanes">
+                <label class="choice-label" for="spotCypress">Cypress Lanes</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotJingJaiSuburb" value="真心市集 Jing Jai Market">
+                <label class="choice-label" for="spotJingJaiSuburb">真心市集 Jing Jai Market</label>
+              </div>
+
+              <p class="spots-group-label">湄登區 Mae Taeng</p>
+              <div class="choice-group">
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotWatBanDen" value="清邁藍廟">
+                <label class="choice-label" for="spotWatBanDen">清邁藍廟</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotBuaTong" value="黏黏瀑布 Bua Tong Sticky Waterfall">
+                <label class="choice-label" for="spotBuaTong">黏黏瀑布 Bua Tong Sticky Waterfall</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotDantewada" value="天使瀑布 Dantewada Land of Angels">
+                <label class="choice-label" for="spotDantewada">天使瀑布 Dantewada Land of Angels</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotElephantCamp" value="湄登大象園／大象營">
+                <label class="choice-label" for="spotElephantCamp">湄登大象園／大象營</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotRafting" value="湄登河激流泛舟">
+                <label class="choice-label" for="spotRafting">湄登河激流泛舟</label>
+              </div>
+
+              <p class="spots-group-label">其他一日遊旅行團景點</p>
+              <div class="choice-group">
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotDoiInthanon" value="茵他儂山國家公園一日團">
+                <label class="choice-label" for="spotDoiInthanon">茵他儂山國家公園一日團</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotChiangRaiTemples" value="清萊白廟黑廟藍廟一日遊">
+                <label class="choice-label" for="spotChiangRaiTemples">清萊白廟黑廟藍廟一日遊</label>
+
+                <input class="choice-input" type="checkbox" name="desiredSpots" id="spotZipline" value="清邁叢林高空滑索體驗">
+                <label class="choice-label" for="spotZipline">清邁叢林高空滑索體驗</label>
+              </div>
+
+              <span class="field-error">請至少選擇一個想去的行程景點</span>
             </fieldset>
 
             <fieldset class="form-field" data-group="earliestStartPref">
@@ -1377,8 +1639,13 @@
             </fieldset>
 
             <div class="form-field">
-              <label class="form-label" for="notes">8. 飲食禁忌或其他需求</label>
-              <textarea class="textarea-input" id="notes" name="notes" placeholder="例如：不吃牛、對海鮮過敏、一定要去大象保護區⋯⋯"></textarea>
+              <label class="form-label" for="notes">8. 飲食禁忌</label>
+              <textarea class="textarea-input" id="notes" name="notes" placeholder="例如：不吃牛、對海鮮過敏⋯⋯"></textarea>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="otherNotes">9. 其他需求</label>
+              <textarea class="textarea-input" id="otherNotes" name="otherNotes" placeholder="例如：想找有游泳池的住宿、希望安排半天自由活動、機票我自己處理⋯⋯"></textarea>
             </div>
 
             <button type="submit" class="submit-btn">提交願望！</button>
@@ -1416,9 +1683,10 @@
       payload.append('accommodationType', formData.getAll('accommodationType').join('、'));
       payload.append('budgetPerNight', (formData.get('budgetPerNight') || '').trim());
       payload.append('transportPref', formData.getAll('transportPref').join('、'));
-      payload.append('pacePref', formData.get('pacePref') || '');
+      payload.append('desiredSpots', formData.getAll('desiredSpots').join('、'));
       payload.append('earliestStartPref', formData.get('earliestStartPref') || '');
       payload.append('notes', (formData.get('notes') || '').trim());
+      payload.append('otherNotes', (formData.get('otherNotes') || '').trim());
 
       fetch(GOOGLE_SHEETS_ENDPOINT, {
         method: 'POST',
@@ -1465,12 +1733,15 @@
         { label: '住宿類型偏好', value: formData.getAll('accommodationType').join('、') },
         { label: '期待每晚住宿預算', value: (formData.get('budgetPerNight') || '').trim() || '（未填寫）' },
         { label: '交通偏好', value: formData.getAll('transportPref').join('、') },
-        { label: '每天行程節奏', value: formData.get('pacePref') },
+        { label: '想去的行程景點', value: formData.getAll('desiredSpots').join('、') },
         { label: '每天最早可接受的開始時間', value: formData.get('earliestStartPref') },
       ];
 
       const notes = (formData.get('notes') || '').trim();
-      items.push({ label: '飲食禁忌或其他需求', value: notes || '（未填寫）' });
+      items.push({ label: '飲食禁忌', value: notes || '（未填寫）' });
+
+      const otherNotes = (formData.get('otherNotes') || '').trim();
+      items.push({ label: '其他需求', value: otherNotes || '（未填寫）' });
 
       return items;
     }
