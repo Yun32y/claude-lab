@@ -423,13 +423,19 @@
   .stay-area-title {
     font-weight: 700;
     color: var(--color-secondary-dark);
-    margin: 0 0 20px;
+    margin: 0 0 8px;
     font-size: 1.1rem;
   }
 
-  .stay-area-title + .stay-area-title,
   .stay-grid + .stay-area-title {
     margin-top: 40px;
+  }
+
+  .stay-area-desc {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    margin: 0 0 20px;
+    text-align: justify;
   }
 
   .stay-grid {
@@ -953,7 +959,7 @@
 
   <!-- 頁首區塊 -->
   <header class="hero">
-    <span class="hero-eyebrow">都是P人居多的快樂旅遊團</span>
+    <span class="hero-eyebrow">都是P人？居多的快樂旅遊團</span>
     <h1>2027 清邁旅遊｜6天5夜自由行</h1>
     <p>在出發前，請先看看里長整理的清邁簡介，說出你的願望吧！<br>소원을 말해봐</p>
     <a href="#prep" class="hero-scroll">
@@ -1215,10 +1221,11 @@
       <div class="container">
         <div class="section-header fade-in">
           <h2>🏡 清邁住宿與價格參考</h2>
-          <p>依區域整理住宿選項，價格為 9 人分攤下的人均每晚金額<br>實際費用以訂房頁面即時報價為準。</p>
+          <p>依區域整理住宿選項，價格為 9 人分攤下的人均每晚金額<br>實際費用以訂房頁面即時報價為準。第一次到清邁推薦住在尼曼區（Nimman）或古城區（Old City）。</p>
         </div>
 
         <h3 class="stay-area-title fade-in">尼曼區 Nimman</h3>
+        <p class="stay-area-desc fade-in">適合喜歡現代便利、咖啡廳與血拼的旅客。離機場近，缺點對聲音敏感的朋友要稍微注意。</p>
         <div class="stay-grid fade-in">
           <a class="stay-card" href="https://www.airbnb.com.tw/rooms/1543918720997635746?check_in=2027-01-14&check_out=2027-01-19&guests=1&adults=9&s=67&unique_share_id=a0e9dca0-8e51-4704-b3ec-80cd0992232b" target="_blank" rel="noopener">
             <img src="assets/ban-ton-son.jpg" alt="BanTonSon 住宿外觀" loading="lazy" width="640" height="427">
@@ -1263,6 +1270,7 @@
         </div>
 
         <h3 class="stay-area-title fade-in">古城區與塔佩門 Old City &amp; Thapae</h3>
+        <p class="stay-area-desc fade-in">適合第一次來想看古蹟、體驗傳統文化的旅客。缺點道路較小、車多，部分老飯店設施可能比較有年代感。</p>
         <div class="stay-grid fade-in">
           <a class="stay-card" href="https://www.airbnb.com.tw/rooms/1689816128605501978?check_in=2027-01-14&check_out=2027-01-19&guests=1&adults=9&s=67&unique_share_id=33956429-0b67-4037-a34a-6596362189aa" target="_blank" rel="noopener">
             <img src="assets/palmcove.jpg" alt="Palmcove 住宿外觀" loading="lazy" width="640" height="427">
@@ -1512,9 +1520,6 @@
             <fieldset class="form-field" data-group="accommodationType" data-min="1">
               <legend class="form-label">3. 住宿類型偏好 <span class="field-hint">可複選</span></legend>
               <div class="choice-group">
-                <input class="choice-input" type="checkbox" name="accommodationType" id="typeHotel" value="飯店">
-                <label class="choice-label" for="typeHotel">飯店</label>
-
                 <input class="choice-input" type="checkbox" name="accommodationType" id="typeGuesthouse" value="民宿">
                 <label class="choice-label" for="typeGuesthouse">民宿</label>
 
