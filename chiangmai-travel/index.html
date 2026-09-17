@@ -32,13 +32,12 @@
     --color-primary-soft: #B8927C;
     --color-secondary: #7D8E95;
     --color-secondary-dark: #46585B;
-    --color-wood: #7D8E95;
-    --color-navy: #607176;
-    --color-navy-dark: #55666B;
+    --color-navy: #55666B;
     --color-text: #344648;
-    --color-text-muted: #5C6561;
-    --color-border: #BEC7CA;
+    --color-text-muted: #4E5754;
+    --color-border: #869499;
     --color-white: #FFFFFF;
+    --color-primary-hover: #D99F81;
     --shadow-soft: 0 10px 30px rgba(52, 70, 72, 0.12);
     --radius-lg: 24px;
     --radius-md: 16px;
@@ -60,6 +59,13 @@
   }
 
   img { max-width: 100%; display: block; }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--color-secondary-dark);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
 
   .container {
     max-width: var(--max-width);
@@ -187,7 +193,6 @@
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     padding: 24px;
-    box-shadow: var(--shadow-soft);
   }
 
   .grid {
@@ -206,7 +211,6 @@
     background: var(--color-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
     padding: 20px;
     overflow-x: auto;
   }
@@ -262,12 +266,12 @@
     font-size: 0.88rem;
     margin-top: 6px;
     white-space: normal;
-    text-align: justify;
+    text-align: left;
   }
 
   .flight-badge {
     display: inline-block;
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     font-weight: 500;
     padding: 4px 12px;
     border-radius: 999px;
@@ -295,13 +299,13 @@
   }
 
   .info-box .card p {
-    text-align: justify;
+    text-align: left;
   }
 
   .info-box .card h3 {
     color: var(--color-secondary-dark);
     margin-bottom: 10px;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
   }
 
   .weather-stats {
@@ -327,7 +331,7 @@
   }
 
   .weather-stat span {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     color: var(--color-text-muted);
   }
 
@@ -341,7 +345,6 @@
     border-radius: var(--radius-lg);
     border: 1px solid var(--color-border);
     overflow: hidden;
-    box-shadow: var(--shadow-soft);
   }
 
   .map-image-wrap img {
@@ -364,14 +367,14 @@
 
   .area-card h3 {
     color: var(--color-primary-dark);
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     margin-bottom: 8px;
   }
 
   .area-card p {
     color: var(--color-text-muted);
     font-size: 0.95rem;
-    text-align: justify;
+    text-align: left;
   }
 
   .area-highlights-label {
@@ -387,7 +390,7 @@
 
   .area-card--navy h3,
   .area-card--navy .area-highlights-label {
-    color: var(--color-navy-dark);
+    color: var(--color-navy);
   }
 
   .area-highlights {
@@ -399,7 +402,7 @@
     color: var(--color-text-muted);
     font-size: 0.88rem;
     margin-bottom: 6px;
-    text-align: justify;
+    text-align: left;
   }
 
   .area-highlights li:last-child {
@@ -440,7 +443,7 @@
     font-weight: 700;
     color: var(--color-secondary-dark);
     margin: 0 0 8px;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .stay-grid + .stay-area-title {
@@ -451,7 +454,7 @@
     color: var(--color-text-muted);
     font-size: 0.92rem;
     margin: 0 0 20px;
-    text-align: justify;
+    text-align: left;
   }
 
   .stay-grid {
@@ -465,7 +468,7 @@
   }
 
   @media (min-width: 900px) {
-    .stay-grid { grid-template-columns: repeat(5, 1fr); }
+    .stay-grid { grid-template-columns: repeat(4, 1fr); }
   }
 
   .stay-card {
@@ -522,7 +525,7 @@
   }
 
   .stay-specs {
-    font-size: 0.78rem;
+    font-size: 0.82rem;
     color: var(--color-text-muted);
     line-height: 1.5;
   }
@@ -536,7 +539,7 @@
 
   .stay-price span {
     font-weight: 400;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--color-text-muted);
     margin-left: 2px;
   }
@@ -559,7 +562,6 @@
     background: var(--color-card);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-soft);
     padding: 24px;
   }
 
@@ -608,7 +610,7 @@
     color: var(--color-text-muted);
     font-size: 0.85rem;
     margin-top: 4px;
-    text-align: justify;
+    text-align: left;
   }
 
   .must-visit-badge {
@@ -647,7 +649,7 @@
   }
 
   .market-item h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     color: var(--color-text);
     margin-bottom: 4px;
   }
@@ -662,20 +664,20 @@
   .market-item p {
     color: var(--color-text-muted);
     font-size: 0.92rem;
-    text-align: justify;
+    text-align: left;
   }
 
   /* ---------- 自由行前準備 ---------- */
   .prep-card h3 {
     color: var(--color-secondary-dark);
     margin-bottom: 10px;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
   }
 
   .prep-card p {
     color: var(--color-text-muted);
     font-size: 0.92rem;
-    text-align: justify;
+    text-align: left;
   }
 
   .prep-card p + p {
@@ -806,7 +808,7 @@
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
-    border: 1.5px solid var(--color-wood);
+    border: 1.5px solid var(--color-secondary);
     border-radius: 999px;
     cursor: pointer;
     font-size: 0.92rem;
@@ -822,9 +824,16 @@
 
   .choice-input:checked + .choice-label {
     background: var(--color-primary);
-    border-color: var(--color-primary);
+    border-width: 2px;
+    border-color: var(--color-primary-dark);
     color: var(--color-text);
-    font-weight: 500;
+    font-weight: 700;
+  }
+
+  .choice-input:checked + .choice-label::before {
+    content: "✓";
+    margin-right: 6px;
+    font-weight: 700;
   }
 
   .choice-input:focus-visible + .choice-label {
@@ -861,8 +870,8 @@
   }
 
   .submit-btn:hover {
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-primary-hover);
+    color: var(--color-text);
   }
 
   .submit-btn:active {
@@ -976,8 +985,8 @@
   }
 
   .music-toggle:hover {
-    background: var(--color-text);
-    color: var(--color-bg);
+    background: var(--color-primary-hover);
+    color: var(--color-text);
   }
 
   .music-toggle:active {
