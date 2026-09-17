@@ -23,24 +23,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    /* 泰北度假風配色：大地色、綠意、暖橘、木質調 */
-    --color-bg: #FBF3E7;
-    --color-bg-alt: #F1E3CC;
-    --color-card: #FFFCF6;
-    --color-primary: #C1652F;
-    --color-primary-dark: #9F4E22;
-    --color-secondary: #4B6B43;
-    --color-secondary-dark: #38512F;
-    --color-wood: #8B5E3C;
-    --color-night: #5C4A73;
-    --color-info: #3E7C8A;
-    --color-navy: #2E4A6B;
-    --color-navy-dark: #22364F;
-    --color-text: #3B2A1D;
-    --color-text-muted: #6E5A47;
-    --color-border: #E2CFAE;
+    /* 日落配色：奶油杏、珊瑚橘、灰藍、深石墨 */
+    --color-bg: #FBE0C3;
+    --color-bg-alt: #ECD6BD;
+    --color-card: #FEF9F3;
+    --color-primary: #FFBB98;
+    --color-primary-dark: #67635C;
+    --color-primary-soft: #B8927C;
+    --color-secondary: #7D8E95;
+    --color-secondary-dark: #46585B;
+    --color-wood: #7D8E95;
+    --color-navy: #607176;
+    --color-navy-dark: #55666B;
+    --color-text: #344648;
+    --color-text-muted: #5C6561;
+    --color-border: #BEC7CA;
     --color-white: #FFFFFF;
-    --shadow-soft: 0 10px 30px rgba(59, 42, 29, 0.1);
+    --shadow-soft: 0 10px 30px rgba(52, 70, 72, 0.12);
     --radius-lg: 24px;
     --radius-md: 16px;
     --radius-sm: 10px;
@@ -272,13 +271,11 @@
     font-weight: 500;
     padding: 4px 12px;
     border-radius: 999px;
-    color: var(--color-white);
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
     white-space: nowrap;
   }
-
-  .flight-badge.badge--morning { background: var(--color-primary); }
-  .flight-badge.badge--noon { background: var(--color-secondary); }
-  .flight-badge.badge--night { background: var(--color-night); }
 
   .flight-table-note {
     margin-top: 16px;
@@ -366,7 +363,7 @@
   }
 
   .area-card h3 {
-    color: var(--color-secondary-dark);
+    color: var(--color-primary-dark);
     font-size: 1.1rem;
     margin-bottom: 8px;
   }
@@ -380,7 +377,7 @@
   .area-highlights-label {
     margin-top: 14px;
     font-weight: 700;
-    color: var(--color-secondary-dark);
+    color: var(--color-primary-dark);
     font-size: 0.88rem;
   }
 
@@ -409,15 +406,33 @@
     margin-bottom: 0;
   }
 
-  .area-highlights a,
-  .area-highlights strong {
-    color: var(--color-primary);
+  .area-highlights a {
+    color: var(--color-primary-dark);
     font-weight: 600;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary-soft);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s ease;
   }
 
-  .area-highlights a:hover {
-    text-decoration: underline;
+  .area-highlights a::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 1px;
+    font-size: 0.7em;
+    opacity: 0.6;
+    transform: translateY(-1px);
+  }
+
+  .area-highlights a:hover,
+  .area-highlights a:focus-visible {
+    text-decoration-color: var(--color-primary-dark);
+  }
+
+  .area-highlights strong {
+    color: var(--color-text);
+    font-weight: 700;
   }
 
   /* ---------- 住宿與價格參考 ---------- */
@@ -483,8 +498,27 @@
 
   .stay-card-body h4 {
     font-size: 0.95rem;
-    color: var(--color-text);
+    color: var(--color-primary-dark);
     margin-bottom: 6px;
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary-soft);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s ease;
+  }
+
+  .stay-card-body h4::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 0.75em;
+    opacity: 0.6;
+    transform: translateY(-1px);
+  }
+
+  .stay-card:hover .stay-card-body h4,
+  .stay-card:focus-visible .stay-card-body h4 {
+    text-decoration-color: var(--color-primary-dark);
   }
 
   .stay-specs {
@@ -505,12 +539,6 @@
     font-size: 0.75rem;
     color: var(--color-text-muted);
     margin-left: 2px;
-  }
-
-  .stay-note {
-    margin-top: 20px;
-    font-size: 0.82rem;
-    color: var(--color-text-muted);
   }
 
   /* ---------- 市集依日期分區 ---------- */
@@ -537,18 +565,15 @@
 
   .market-day-badge {
     display: inline-block;
-    color: var(--color-white);
+    color: var(--color-text);
     font-weight: 700;
     font-size: 0.9rem;
     padding: 5px 18px;
     border-radius: 999px;
     margin-bottom: 16px;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
   }
-
-  .market-day-badge.badge--weekday { background: var(--color-secondary); }
-  .market-day-badge.badge--sat { background: var(--color-info); }
-  .market-day-badge.badge--sun { background: var(--color-primary); }
-  .market-day-badge.badge--daily { background: var(--color-night); }
 
   .market-day-item {
     padding: 10px 0;
@@ -588,7 +613,7 @@
 
   .must-visit-badge {
     display: inline-block;
-    background: #E5A32B;
+    background: var(--color-primary);
     color: var(--color-text);
     font-size: 0.72rem;
     font-weight: 700;
@@ -660,7 +685,7 @@
   .prep-link {
     display: inline-block;
     margin-top: 12px;
-    color: var(--color-primary);
+    color: var(--color-primary-dark);
     font-weight: 600;
     font-size: 0.92rem;
     text-decoration: none;
@@ -724,8 +749,8 @@
   .text-input:focus,
   .textarea-input:focus {
     outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(193, 101, 47, 0.15);
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 0 0 3px rgba(103, 99, 92, 0.15);
   }
 
   .textarea-input {
@@ -752,6 +777,21 @@
 
   .choice-group + .spots-group-label {
     margin-top: 18px;
+  }
+
+  .delegate-group {
+    padding-bottom: 16px;
+    margin-bottom: 4px;
+    border-bottom: 1px dashed var(--color-border);
+  }
+
+  .spots-region-groups {
+    transition: opacity 0.2s ease;
+  }
+
+  .spots-region-groups.is-disabled {
+    opacity: 0.4;
+    pointer-events: none;
   }
 
   .choice-input {
@@ -783,7 +823,7 @@
   .choice-input:checked + .choice-label {
     background: var(--color-primary);
     border-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-text);
     font-weight: 500;
   }
 
@@ -812,16 +852,17 @@
     padding: 16px;
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--color-white);
+    color: var(--color-text);
     background: var(--color-primary);
     border: none;
     border-radius: 999px;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
   }
 
   .submit-btn:hover {
-    background: var(--color-primary-dark);
+    background: var(--color-text);
+    color: var(--color-bg);
   }
 
   .submit-btn:active {
@@ -925,17 +966,18 @@
     border: none;
     border-radius: 999px;
     background: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-text);
     font-family: inherit;
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
     box-shadow: var(--shadow-soft);
-    transition: background 0.2s ease, transform 0.15s ease;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
   }
 
   .music-toggle:hover {
-    background: var(--color-primary-dark);
+    background: var(--color-text);
+    color: var(--color-bg);
   }
 
   .music-toggle:active {
@@ -965,8 +1007,8 @@
   <!-- 頁首區塊 -->
   <header class="hero">
     <span class="hero-eyebrow">P人居多的快樂旅遊團</span>
-    <h1>2027 清邁旅遊｜6天5夜自由行</h1>
-    <p>在出發前，請先看看里長整理的清邁簡介，說出你的願望吧！<br>소원을 말해봐</p>
+    <h1>2027 清邁旅遊<br>6天5夜自由行</h1>
+    <p>在出發前，請先看看里長整理的清邁簡介，<br>說出你的願望吧！<br>소원을 말해봐</p>
     <a href="#prep" class="hero-scroll">
       <span>先了解一下清邁</span>
       <span class="arrow">↓</span>
@@ -1226,7 +1268,7 @@
       <div class="container">
         <div class="section-header fade-in">
           <h2>🏡 清邁住宿與價格參考</h2>
-          <p>依區域整理住宿選項，價格為 9 人分攤下的人均每晚金額<br>實際費用以訂房頁面即時報價為準。第一次到清邁推薦住在尼曼區或古城區。</p>
+          <p>依區域整理住宿選項，<br>價格為 9 人分攤下的人均每晚金額。<br>實際費用以訂房頁面即時報價為準，<br>第一次到清邁推薦住在尼曼區或古城區。</p>
         </div>
 
         <h3 class="stay-area-title fade-in">尼曼區 Nimman</h3>
@@ -1318,7 +1360,6 @@
             </div>
           </a>
         </div>
-        <p class="stay-note">點擊圖片或名稱即可前往 Airbnb 房源頁面查看詳細資訊與即時房價。</p>
       </div>
     </section>
 
@@ -1493,7 +1534,7 @@
       <div class="container">
         <div class="section-header fade-in">
           <h2>📝 說出你的願望清單！</h2>
-          <p>為了盡力安排大家滿意的行程，請花點時間填寫，謝謝！</p>
+          <p>為了盡力安排大家滿意的行程，<br>請花點時間填寫，謝謝！</p>
         </div>
 
         <form class="trip-form fade-in" id="tripForm" novalidate>
@@ -1522,19 +1563,19 @@
               <span class="field-error">請選擇一項航班時間偏好</span>
             </fieldset>
 
-            <fieldset class="form-field" data-group="accommodationType" data-min="1">
-              <legend class="form-label">3. 住宿類型偏好 <span class="field-hint">可複選</span></legend>
+            <fieldset class="form-field" data-group="accommodationType">
+              <legend class="form-label">3. 住宿類型偏好</legend>
               <div class="choice-group">
-                <input class="choice-input" type="checkbox" name="accommodationType" id="typeGuesthouse" value="民宿">
+                <input class="choice-input" type="radio" name="accommodationType" id="typeGuesthouse" value="民宿" required>
                 <label class="choice-label" for="typeGuesthouse">民宿</label>
 
-                <input class="choice-input" type="checkbox" name="accommodationType" id="typeVilla" value="Villa">
-                <label class="choice-label" for="typeVilla">Villa</label>
+                <input class="choice-input" type="radio" name="accommodationType" id="typeVilla" value="泳池Villa">
+                <label class="choice-label" for="typeVilla">泳池Villa</label>
 
-                <input class="choice-input" type="checkbox" name="accommodationType" id="typeAny" value="都可以，配合大家">
+                <input class="choice-input" type="radio" name="accommodationType" id="typeAny" value="都可以，配合大家">
                 <label class="choice-label" for="typeAny">都可以，配合大家</label>
               </div>
-              <span class="field-error">請至少選擇一項住宿類型偏好</span>
+              <span class="field-error">請選擇一項住宿類型偏好</span>
             </fieldset>
 
             <div class="form-field">
@@ -1554,17 +1595,24 @@
                 <input class="choice-input" type="checkbox" name="transportPref" id="transportTuktuk" value="想體驗嘟嘟車">
                 <label class="choice-label" for="transportTuktuk">想體驗嘟嘟車</label>
 
+                <input class="choice-input" type="checkbox" name="transportPref" id="transportScooter" value="想體驗機車">
+                <label class="choice-label" for="transportScooter">想體驗機車</label>
+
                 <input class="choice-input" type="checkbox" name="transportPref" id="transportTour" value="KKday/Klook 一日遊">
                 <label class="choice-label" for="transportTour">KKday/Klook 一日遊</label>
-
-                <input class="choice-input" type="checkbox" name="transportPref" id="transportAny" value="都可以，配合大家">
-                <label class="choice-label" for="transportAny">都可以，配合大家</label>
               </div>
               <span class="field-error">請至少選擇一項交通偏好</span>
             </fieldset>
 
             <fieldset class="form-field" data-group="desiredSpots" data-min="1">
               <legend class="form-label">6. 想去的行程景點 <span class="field-hint">可複選</span></legend>
+
+              <div class="choice-group delegate-group">
+                <input class="choice-input" type="checkbox" id="delegateToLeader" name="delegateToLeader" value="交由里長安排">
+                <label class="choice-label" for="delegateToLeader">交由里長安排</label>
+              </div>
+
+              <div id="spotsRegionGroups" class="spots-region-groups">
 
               <p class="spots-group-label">尼曼區 Nimman</p>
               <div class="choice-group">
@@ -1668,7 +1716,9 @@
                 <label class="choice-label" for="spotZipline">清邁叢林高空滑索體驗</label>
               </div>
 
-              <span class="field-error">請至少選擇一個想去的行程景點</span>
+              </div>
+
+              <span class="field-error">請至少選擇一個想去的行程景點，或選擇交由里長安排</span>
             </fieldset>
 
             <fieldset class="form-field" data-group="earliestStartPref">
@@ -1719,9 +1769,8 @@
   </main>
 
   <footer class="site-footer">
-    <p>2027 清邁旅遊．行前資訊與願望清單調查</p>
-    <p>© 2026 里長. All rights reserved.</p>
     <p>首頁圖片來源：Klook</p>
+    <p>© 2026 Fun里長. All rights reserved.</p>
   </footer>
 
   <script>
@@ -1789,7 +1838,7 @@
         { label: '住宿類型偏好', value: formData.getAll('accommodationType').join('、') },
         { label: '期待每晚住宿預算', value: (formData.get('budgetPerNight') || '').trim() || '（未填寫）' },
         { label: '交通偏好', value: formData.getAll('transportPref').join('、') },
-        { label: '想去的行程景點', value: formData.getAll('desiredSpots').join('、') },
+        { label: '想去的行程景點', value: formData.get('delegateToLeader') ? '交由里長安排' : formData.getAll('desiredSpots').join('、') },
         { label: '每天最早可接受的開始時間', value: formData.get('earliestStartPref') },
       ];
 
@@ -1822,6 +1871,20 @@
       const successPanel = document.getElementById('formSuccess');
       const resetBtn = document.getElementById('resetFormBtn');
       const checkboxFieldsets = form.querySelectorAll('fieldset[data-min]');
+
+      // 勾選「交由里長安排」時，停用並灰化下方的景點選項
+      const delegateCheckbox = document.getElementById('delegateToLeader');
+      const spotsRegionGroups = document.getElementById('spotsRegionGroups');
+      const spotCheckboxes = form.querySelectorAll('input[name="desiredSpots"]');
+
+      delegateCheckbox.addEventListener('change', () => {
+        const delegated = delegateCheckbox.checked;
+        spotsRegionGroups.classList.toggle('is-disabled', delegated);
+        spotCheckboxes.forEach((checkbox) => {
+          checkbox.disabled = delegated;
+          if (delegated) checkbox.checked = false;
+        });
+      });
 
       form.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -1867,6 +1930,10 @@
         successPanel.classList.remove('is-visible');
         form.querySelectorAll('.form-field.has-error').forEach((field) => {
           field.classList.remove('has-error');
+        });
+        spotsRegionGroups.classList.remove('is-disabled');
+        spotCheckboxes.forEach((checkbox) => {
+          checkbox.disabled = false;
         });
         form.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
