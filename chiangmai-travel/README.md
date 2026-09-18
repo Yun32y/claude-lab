@@ -39,7 +39,7 @@ python3 -m http.server 8000
 
 ```bash
 cd chiangmai-travel
-npx --yes vercel deploy --prod --yes
+npx --yes vercel deploy --prod --yes --scope yun32y1
 ```
 
 才會真的更新 https://chiangmai-travel-2027.vercel.app/ 上線的內容。
