@@ -353,11 +353,110 @@
     display: block;
   }
 
+  .map-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .map-tab {
+    flex: 1;
+    min-width: 140px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: var(--color-primary-dark);
+    background: var(--color-card);
+    border: 1.5px solid var(--color-border);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .map-tab:hover {
+    background: var(--color-bg-alt);
+  }
+
+  .map-tab.is-active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text);
+  }
+
+  .map-image-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+  }
+
+  .map-image-btn[hidden] {
+    display: none;
+  }
+
   .map-caption {
     text-align: center;
     color: var(--color-text-muted);
     font-size: 0.85rem;
     margin-top: 10px;
+  }
+
+  /* ---------- 地圖全螢幕放大檢視 ---------- */
+  .map-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(23, 18, 13, 0.92);
+  }
+
+  .map-lightbox[hidden] {
+    display: none;
+  }
+
+  .map-lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-sm);
+  }
+
+  .map-lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-card);
+    color: var(--color-text);
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-soft);
+    z-index: 201;
+  }
+
+  .map-lightbox-close:hover {
+    background: var(--color-bg-alt);
+  }
+
+  body.map-lightbox-open {
+    overflow: hidden;
   }
 
   .area-card {
@@ -1184,11 +1283,25 @@
         </div>
 
         <figure class="map-figure fade-in">
-          <div class="map-image-wrap">
-            <img src="assets/chiangmai-regions-map.jpeg" alt="清邁區域特色地圖：尼曼區商圈、古城區與塔佩門、夜生活熱鬧區、郊區與大自然" loading="lazy" width="1600" height="872">
+          <div class="map-tabs">
+            <button type="button" class="map-tab is-active" data-map-target="area" aria-pressed="true">全區地圖</button>
+            <button type="button" class="map-tab" data-map-target="oldcity" aria-pressed="false">古城放大</button>
           </div>
-          <figcaption class="map-caption">相對位置示意圖，未包含西北方湄登區，實際地標位置請以 Google Maps 為準！</figcaption>
+          <div class="map-image-wrap">
+            <button type="button" class="map-image-btn is-active" data-map-view="area" aria-label="點擊全螢幕放大檢視全區地圖">
+              <img src="assets/chiangmai-area-map.jpg" alt="清邁全區地圖：以箭頭標示尼曼區、古城區與塔佩門、夜生活熱鬧區、郊區，以及湄林、湄登、茵他儂山的相對方向" loading="lazy" width="3200" height="2600">
+            </button>
+            <button type="button" class="map-image-btn" data-map-view="oldcity" aria-label="點擊全螢幕放大檢視古城放大地圖" hidden>
+              <img src="assets/chiangmai-oldcity-map.jpg" alt="清邁古城區放大地圖：護城河內主要寺廟與塔佩門的相對位置" loading="lazy" width="3200" height="2200">
+            </button>
+          </div>
+          <figcaption class="map-caption">全區圖以箭頭標示湄林、湄登與茵他儂山方向；精確位置請參考 Google 地圖。</figcaption>
         </figure>
+
+        <div class="map-lightbox" id="mapLightbox" hidden>
+          <button type="button" class="map-lightbox-close" id="mapLightboxClose" aria-label="關閉地圖放大檢視">✕</button>
+          <img src="" alt="" class="map-lightbox-img" id="mapLightboxImg">
+        </div>
 
         <div class="grid grid--2 fade-in">
           <div class="card area-card">
@@ -2013,9 +2126,67 @@
       tryPlay();
     }
 
+    // 地圖分頁切換（全區／古城放大）與全螢幕放大檢視
+    function initMapViewer() {
+      const tabs = document.querySelectorAll('.map-tab');
+      const panels = document.querySelectorAll('.map-image-btn');
+      const lightbox = document.getElementById('mapLightbox');
+      const lightboxImg = document.getElementById('mapLightboxImg');
+      const lightboxClose = document.getElementById('mapLightboxClose');
+
+      if (!tabs.length || !lightbox) return;
+
+      tabs.forEach((tab) => {
+        tab.addEventListener('click', () => {
+          const target = tab.dataset.mapTarget;
+
+          tabs.forEach((t) => {
+            const isActive = t === tab;
+            t.classList.toggle('is-active', isActive);
+            t.setAttribute('aria-pressed', String(isActive));
+          });
+
+          panels.forEach((panel) => {
+            const isActive = panel.dataset.mapView === target;
+            panel.hidden = !isActive;
+            panel.classList.toggle('is-active', isActive);
+          });
+        });
+      });
+
+      function openLightbox(img) {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.hidden = false;
+        document.body.classList.add('map-lightbox-open');
+      }
+
+      function closeLightbox() {
+        lightbox.hidden = true;
+        lightboxImg.src = '';
+        document.body.classList.remove('map-lightbox-open');
+      }
+
+      panels.forEach((panel) => {
+        panel.addEventListener('click', () => openLightbox(panel.querySelector('img')));
+      });
+
+      lightboxClose.addEventListener('click', closeLightbox);
+
+      // 點擊背景（非圖片本身）關閉
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
+      });
+    }
+
     initFadeInObserver();
     initTripForm();
     initBackgroundMusic();
+    initMapViewer();
   </script>
 
 </body>
